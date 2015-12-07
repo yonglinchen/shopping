@@ -1,0 +1,58 @@
+.success {
+    padding: 31px 10px 45px 80px;
+}
+.success {
+    overflow: hidden;
+    padding: 31px 10px 45px 0;
+    zoom: 1;
+}
+.success-b {
+    color: #999;
+    font: 12px/150% Arial,Verdana,"\5b8b\4f53";
+    height: auto;
+}
+.success-b {
+    float: left;
+    overflow: hidden;
+    width: 304px;
+    height: 40px;
+    padding-left: 56px;
+    background: url(//misc.360buyimg.com/user/cart/widget/addtocart/i/20130425D.png) no-repeat 0 -100px;
+    font: 400 24px/40px \5fae\8f6f\96c5\9ed1;
+    color: #7ABD54;
+}
+h3 {
+    margin: 0;
+    padding: 0;
+    font: 400 24px/40px \5fae\8f6f\96c5\9ed1;
+    color: #7ABD54;
+}
+#initCart_next_go {
+    float: left;
+}
+.btn-1:link, .btn-1:visited {
+    color: #fff;
+    text-decoration: none;
+}
+.btn-1 {
+    background-color: #e74649;
+    background-image: -moz-linear-gradient(top,#e74649,#df3134);
+    background-image: -webkit-gradient(linear,left top,left bottom,color-stop(0,#e74649),color-stop(1,#df3134));
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#e74649', endColorstr='#df3134', GradientType='0');
+    -ms-filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#e74649', endColorstr='#df3134');
+    background-image: linear-gradient(to top,#e74649 0,#df3134 100%);
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    display: inline-block;
+    height: 18px;
+    line-height: 18px;
+    padding: 9px 30px;
+    color: #fff;
+    font-size: 15px;
+    font-weight: 700;
+    font-family: '\5fae\8f6f\96c5\9ed1';
+}
+.ftx-05 {
+    color: #005ea7;
+}

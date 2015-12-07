@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>订单结算页</title>
+		<link href="css/reset.css" rel="stylesheet" />
+		<link href="css/getOrderInfo.css" rel="stylesheet" />
+		<script type="text/javascript" src="js/jquery.min.js"></script>
+		
+	</head>
+	<body>
+		<div class='mask'></div>
+                <!-- 新增收货地址 -->
+		<div class="popover_3 collect" style="display:none;">
+		    <div class="poptit clear">
+                        <span class="fl">新增收货人信息</span>
+		        <a href="javascript:;" title="关闭" class="close fr">×</a>
+		    </div>
+                    <div class="poptit_01">
+                        <div class="mt15">
+                            <span>收货人：</span><input type="" maxlength="5" class=""  />
+                        </div>
+                        <div class="mt15">
+                            <span>所在地区：</span>
+                            <select class="">
+                                    <option value="">请选择</option>
+                            </select>
+                            <select class="">
+                                    <option value="">请选择</option>
+                            </select>
+                            <select class="">
+                                    <option value="">请选择</option>
+                            </select>
+                        </div> 
+                        <div class="mt15">
+                            <span>详细地址：</span><input type=""  class=""  />
+                        </div>
+                        <div class="mt15">
+                            <span>手机号码：</span><input type="" maxlength="11"' class=""  /><span>固定电话：</span><input type="" placeholder='' class=""  />
+                        </div>
+                        <div class="mt15">
+                            <span>邮箱：</span><input type=""  class=""  /><br />
+                        </div>
+                        <div class="mt15" style="padding-bottom: 50px;">
+                            <span></span><input type="submit" value='保存收货人信息' class="save"  />
+                        </div>
+                    </div>
+		</div>
+		<div class="container">
+			<!--订单头部开始-->
+			<div class="header">
+			    <div id="logo">
+			        <a href="#" class="link1" target="_blank"><img src="images/logo.png" alt=""></a>
+			    </div>
+			    <div class="stepflex" id="#sflex03">
+			        <dl class="first done">
+			            <dt class="s-num">1</dt>
+			            <dd class="s-text">1.我的购物车</dd>
+			        </dl>
+			        <dl class="normal doing">
+			            <dt class="s-num">2</dt>
+			            <dd class="s-text">2.填写核对订单信息</dd>
+			        </dl>
+			        <dl class="normal last">
+			            <dt class="s-num">3</dt>
+			            <dd class="s-text">3.成功提交订单</dd>
+			        </dl>
+			    </div>
+			</div>
+			<!--订单头部结束-->
+			
+			<div id="content">
+				<!--收货人地址开始-->
+				<div class="checkout-tit">
+		            <span class="tit-txt">填写并核对订单信息</span>
+		        </div>
+		        <div class="checkout-steps">
+		        	<div class="step-tit">
+		                <h3>收货人信息</h3>
+		                <div class="extra-r">
+		                    <a href="javascript:;" class="ftx-05" onclick="use_NewConsignee()">新增收货地址</a>
+		                </div>
+		            </div>
+		            <div class="consignee-cont consignee-scroll">
+                        <ul id="consignee-list">
+							<li class="ui-switchable-panel ui-switchable-panel-selected" selected="selected">
+								<div class="consignee-item item-selected">
+									<span limit="3">姬单单 北京</span><b></b>			
+								</div>
+								<div class="addr-detail">
+									<span class="addr-name" limit="6" title="姬单单">姬单单</span>
+									<span class="addr-info" limit="45">北京 朝阳区 四环到五环之间 北京市朝阳区望京福码大厦A座18层</span>
+									<span class="addr-tel">132****7353</span>
+								</div>
+								<div class="op-btns">
+									<a href="javascript:;" class="ftx-05 setdefault-consignee hide">设为默认地址</a>
+									<a href="javascript:;" class="ftx-05 edit-consignee" onclick="use_NewConsignee()">编辑</a>
+									<a href="javascript:;" class="ftx-05 del-consignee hide">删除</a>
+								</div>
+							</li>
+							<li class="ui-switchable-panel ui-switchable-panel-selected" selected="selected">
+								<div class="consignee-item">
+									<span limit="3">姬单单 北京</span><b></b>			
+								</div>
+								<div class="addr-detail">
+									<span class="addr-name" limit="6" title="姬单单">姬单单</span>
+									<span class="addr-info" limit="45">北京 朝阳区 四环到五环之间 北京市朝阳区望京福码大厦A座18层</span>
+									<span class="addr-tel">132****7353</span>
+								</div>
+								<div class="op-btns">
+									<a href="javascript:;" class="ftx-05 setdefault-consignee hide">设为默认地址</a>
+									<a href="javascript:;" class="ftx-05 edit-consignee" onclick="use_NewConsignee()">编辑</a>
+									<a href="javascript:;" class="ftx-05 del-consignee hide">删除</a>
+								</div>
+							</li>
+							<li class="ui-switchable-panel ui-switchable-panel-selected" selected="selected">
+								<div class="consignee-item">
+									<span limit="3">姬单单 北京</span><b></b>			
+								</div>
+								<div class="addr-detail">
+									<span class="addr-name" limit="6" title="姬单单">姬单单</span>
+									<span class="addr-info" limit="45">北京 朝阳区 四环到五环之间 北京市朝阳区望京福码大厦A座18层</span>
+									<span class="addr-tel">132****7353</span>
+								</div>
+								<div class="op-btns">
+									<a href="javascript:;" class="ftx-05 setdefault-consignee hide">设为默认地址</a>
+									<a href="javascript:;" class="ftx-05 edit-consignee" onclick="use_NewConsignee()">编辑</a>
+									<a href="javascript:;" class="ftx-05 del-consignee hide">删除</a>
+								</div>
+							</li>
+                        </ul>
+                    </div>
+                    <!--收货人地址结束-->
+                    <div class="line"></div>
+                    <!--支付方式开始-->
+                    <div class="step-pay">
+					  <h3>支付方式</h3>
+					</div>
+		            <div class="list-cont">
+			      		<ul id="payment-list">																					
+							<li style="cursor: pointer;">
+								<div class="payment-item online-payment payment-item-disabled">
+									<b></b>货到付款
+								</div>
+							</li>
+			        		<li style="cursor: pointer;" onclick="save_Pay(4); ">						
+								<div class="payment-item item-selected online-payment" for="pay-method-4" payname="在线支付" payid="4">
+									<b></b>在线支付      
+								</div>
+							</li>
+							<li style="cursor: pointer;">
+								<div class="payment-item online-payment payment-item-disabled">
+									<b></b>公司付款
+								</div>
+							</li>
+						</ul>
+					</div>
+					<div class="line"></div>
+					<!--送货清单开始-->
+					<div class="step-give">
+					  <h3>送货清单</h3>
+					</div>
+					<div class="goods-list">
+					    <div class="goods-tit">
+					      <h4 class="vendor_name_h" id="75836">商家：美的厨房家电旗舰店</h4>
+					    </div>
+					      <!--单品开始-->
+					      <div class="goods-items">     						
+					        <div class="goods-item goods-item-extra">
+								<div class="p-img">
+									<a target="_blank" href=""><img src="//img14.360buyimg.com/N4/jfs/t2233/183/845842268/89174/ef977bf2/56309006N498d80df.jpg" alt=""></a>
+								</div>
+								<div class="goods-msg">
+						          	<div class="goods-msg-gel">			
+					  					<div class="p-name">
+					  					     <a href="http://item.jd.com/1571128923.html" target="_blank">
+					  					           美的（Midea）电磁炉  WK2102T 整版触摸 黑晶面板 大风扇(赠汤锅+炒锅） 黑色					     
+					  					     </a>
+					  					</div>
+							            <div class="p-price">
+											<strong class="jd-price">￥189.00</strong>
+							              	<span class="p-num">x1</span>
+							              	<span class="p-state" skuid="1571128923">有货</span>            
+							            </div>
+				           		 	</div>  
+								</div>
+						        <div>
+					                <i class="p-icon p-icon-w"></i><span class="ftx-04">7天无理由退货</span>
+					            </div>
+						  	</div>
+					    </div>       
+				 	</div><!--goods-list 结束-->
+				 	
+				 	<div class="order-content">
+				 		<div class="remark-tit">添加订单备注</div>
+                    	<div id="remarkId" style="margin-bottom:7px">
+                    		<div class="form remark-cont">
+                    			<input type="text" id="remarkText" maxlength="45" size="60" class="itxt itxt01" placeholder="限45个字（定制类商品，请将购买需求在备注中做详细说明）">      <span class="ftx-03 ml10">&nbsp;&nbsp;提示：请勿填写有关支付、收货、发票方面的信息</span>  
+                    		</div>
+                    	</div>
+                   </div>
+		        </div>  
+		        
+        		<div class="pay_money">
+        			<span class="total">应付总额：<strong id="payPriceId">￥199.00</strong></span>
+        			<button type="submit" class="checkout-submit" id="order-submit" onclick="javascript:submit_Order();">
+                                                 提交订单<b></b>
+                    </button>
+        		</div>
+        		   
+        </div>
+
+    </div>
+    <script type="text/javascript" src="js/getOrderInfo.js"></script>
+	</body>
+</html>

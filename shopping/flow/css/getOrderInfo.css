@@ -1,0 +1,80 @@
+body{ color: #666;font: 12px/150% Arial,Verdana,"\5b8b\4f53";}
+.line{border-top:1px solid #ccc; }
+a{text-decoration: none;}
+/*订单头部*/
+.header{width: 990px; margin: 0 auto; padding: 20px 0 10px; display: block; clear: both;}
+.header #logo{float: left;}
+.header .stepflex{ text-align: center; margin: 30px 0 0; float: right;}
+.header:after{ content: "."; display: block; clear: both;}
+.header .stepflex dl.done{ border-top-color: #caecb6;}
+.header .stepflex dl{ float: left;width: 160px; border-top:5px solid #ccc;}
+.header .stepflex dl.done .s-num{background-position:-46px 0;}
+.header .stepflex .s-num{margin: -15px auto 0; color: #fff; font-weight: 700; width: 23px; height: 23px; background-image: url("../images/step.png"); line-height: 23px;;}
+.header .stepflex dl.done .s-text{ color: #caecb6;}
+.header .stepflex dl.doing{ border-top-color: #7abd54;}
+.header .stepflex dl.doing .s-num{ background-position: -23px 0;}
+.header .stepflex dl.doing .s-text{ color: #7abd54;}
+.header .stepflex .s-text{ color: #ccc;;}
+
+/*设置地址*/
+#content{width: 990px; margin: 0 auto;}
+.checkout-tit{ height: 40px; line-height: 40px;font-size: 16px;font-family: "微软雅黑";}
+.checkout-steps{ padding: 0 20px; border: 1px solid #f0f0f0; overflow: hidden;}
+.checkout-steps .step-tit{ line-height: 40px; height: 40px; color: #333;}
+.checkout-steps .step-tit h3{font-weight: bold; float: left;}
+.checkout-steps .step-tit .extra-r{ float: right;}
+.checkout-steps .step-tit .extra-r .ftx-05{ color:#005ea7; text-decoration: none;}
+.ui-switchable-panel{list-style: none;height: 30px;margin: 6px 0;float: left;width: 99.8%;}
+.li_hover{background: #fff3f3;}
+.consignee-item{padding: 5px 24px; float: left;position: relative; background: #fff;border: 1px solid #ddd; line-height: 18px;height: 18px;width: 90px; list-style: none; cursor: pointer;text-align: center;}
+.consignee-item.item-selected b{display: block;position: absolute;right: 0;bottom: 0;width: 12px;height: 12px;overflow: hidden;background: url("../images/selected-icon.png") no-repeat;}
+.addr-detail{ line-height: 30px; height: 30px; margin-left: 10px;display: inline-block;}
+.op-btns{ display: inline-block; float: right; line-height: 30px; height: 30px; margin-right: 10px;}
+.op-btns a{ text-decoration: none; color: #005ea7; margin-right: 10px;}
+.consignee-scroll{overflow: hidden;padding-bottom: 10px;;}
+.consignee-scroll .consignee-item.item-hover, .consignee-scroll .consignee-item.item-selected, .consignee-scroll .consignee-item:hover{border: 2px solid #e4393c;padding: 4px 23px;}
+
+/*支付方式*/
+.step-pay{font-weight: bold; color: #000; line-height: 40px; }
+.list-cont{overflow: hidden; padding-bottom: 10px;}
+.list-cont li{ float: left; margin-right: 10px;}
+.list-cont .payment-item.item-selected{border: 2px solid #e4393c;padding: 4px 23px;}
+.list-cont .payment-item{float: left;position: relative;border: 1px solid #ddd;height: 18px;line-height: 18px;padding: 5px 24px;cursor: pointer;}
+.payment-item-hover:hover{border: 2px solid #e4393c;padding: 4px 23px;}
+
+/*送货清单*/
+.step-give{clear: both;font-weight: bold; color: #000; line-height: 40px;}
+.p-img{display: inline-block; float: left; margin-right: 10px;}
+.p-name{width: 300px;float: left;margin-right: 10px;}
+.p-name a{text-decoration: none; color: #666;}
+.p-price{float: left;margin-right: 10px; width: 300px;; }
+.p-price .jd-price,.p-price .p-num{width: 100px;display: inline-block; text-align: center;}
+.p-icon{display: inline-block;width: 18px;height: 18px;margin: 0 5px 0 0;overflow: hidden;background: url("../images/purchase-icon.png") no-repeat;vertical-align: middle;}
+.p-icon-w{ background-position: 0 -84px;}
+
+.order-content{ clear: both; line-height: 40px;}
+.pay_money{ float: right; line-height: 50px;}
+.pay_money .total{ font-size: 18px;}
+.pay_money .total strong{ color: #e4393c; font-weight: bold; font-size: 25px;}
+.checkout-submit{ background: #e4393c; border: none;border-radius: 3px; color: #fff; font-weight: bold; line-height: 30px; font-size: 15px; padding:2px 4px; width: 100px; margin-left: 10px;}
+
+
+/*新增地址弹出框*/
+.mt15{margin-top: 15px;}
+.mask{display:none;z-index: 9998;position:fixed;top:0;left:0;width:100%;height:100%;background:#000;opacity:0.7;filter:alpha(opacity=20); }
+.close{font-size: 30px;color: #ccc;}
+.popover{display:none;background-color:#f2f2f2;box-shadow: 0 0 10px #666;position:fixed;top:8%;left:4%;width:92%;z-index:9999;/*height:60%;*/border-radius:5px;text-align: center;margin:0 auto;color: #808080;}
+.popover_3{background-color:#f2f2f2;box-shadow: 0 0 10px #666;position:fixed;top:8%;left:30%;width:40%;z-index:9999;/*height:60%;*/border-radius:3px;border: 3px solid #ccc;margin:0 auto;color: #808080;}
+.poptit{line-height: 40px;padding: 0 10px 0;}
+.poptit_01{padding-bottom: 50px;}
+.poptit_01 span{display :inline-block;width: 13%;text-align: right;}
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,12 @@
+body{max-width: 1000px;margin: 0 auto;}
+.col_red{color: red;}
+.f14{font-size: 14px;}
+.f16{font-size: 16px;}
+.mt20{margin-top: 20px;}
+.mainLeft{margin-top: 50px;width: 20%;}
+.mainLeft ul{background-color: #ccc;}
+.mainLeft ul li{height: 30px;line-height: 30px;padding-left: 20px;}
+.mainLeft_li{color: #fff;background-color: red;font-weight: bold;}
+.main{margin-top: 50px;width: 75%;margin-left: 5%;}
+.my_gradeMain{line-height: 20px;}
+.my_growthMain{line-height: 20px;}

@@ -1,0 +1,35 @@
+body{ color: #666;font: 12px/150% Arial,Verdana,"\5b8b\4f53"; }
+.line{border-top:1px solid #ccc; }
+/*订单头部*/
+.header{width: 990px; margin: 0 auto; padding: 20px 0 10px; display: block; clear: both;}
+.header #logo{float: left;}
+.header .stepflex{ text-align: center; margin: 30px 0 0; float: right;}
+.header:after{ content: "."; display: block; clear: both;}
+.header .stepflex dl.done{ border-top-color: #caecb6;}
+.header .stepflex dl{ float: left;width: 160px; border-top:5px solid #ccc;}
+.header .stepflex dl.done .s-num{background-position:-46px 0;}
+.header .stepflex .s-num{margin: -15px auto 0; color: #fff; font-weight: 700; width: 23px; height: 23px; background-image: url("../images/step.png"); line-height: 23px;;}
+.header .stepflex dl.done .s-text{ color: #caecb6;}
+.header .stepflex dl.doing{ border-top-color: #caecb6;}
+.header .stepflex dl.doing .s-num{ background-position: -46px 0;}
+.header .stepflex dl.doing .s-text{ color: #caecb6;}
+.header .stepflex dl.last{border-top-color: #7abd54;}
+.header .stepflex dl.last .s-num{ background-position: -23px 0;}
+.header .stepflex dl.last .s-text{ color: #7abd54;}
+.header .stepflex .s-text{ color: #ccc;;}
+
+.order_content{background-color: #F1F2F7; height: 400px;}
+.order_submit{width: 990px; margin: 0 auto; padding-top: 20px;}
+.order_thank{ font-size: 14px; font-weight: bold; line-height: 35px;height: 35px;}
+.order_pay{float: right; font-weight: normal; }
+.order_money{color: #ff5d5b; font-weight: bold; font-size: 18px;;}
+.order_time{color: #ff5d5b;}
+.order_p2{ border-bottom: 1px solid #ddd; padding-bottom: 15px;}
+
+
+
+
+
+
+
+

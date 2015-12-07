@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+    <head> 
+        <title>购物商品展示页面</title> 
+        <meta charset="UTF-8" /> 
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" /> 
+        <link rel="stylesheet" href="css/top.css" >
+        <link rel="stylesheet" href="css/detail.css">
+        <script type="text/javascript" src="js/jquery.min.js"></script>
+        <script type="text/javascript" src="js/base.js"></script> 
+        <script type="text/javascript" src="js/jqueryzoom-jcarousel.js"></script> 
+        <script type="text/javascript" src="js/common.js" ></script> 
+        <script type="text/javascript" src="js/sendAjax.js" ></script> 
+        <script type="text/javascript" src="js/show.js" ></script> 
+    </head> 
+    <body> 
+        <!--  start  ------------------------------------------------------> 
+        <div class="details_left"> 
+            <!-- 商品描述--> 
+            <div class="details_left_top"> 
+                <!-- jqzoom--> 
+                <div id="zoom"> 
+                    <div class="jqzoom" id="spec-n1">
+                        <img height="350" src="images/2-2.jpg" jqimg="images/2-2.jpg" width="350" alt="" /> 
+                    </div> 
+                    <div id="spec-n5"> 
+                        <div class="control" id="spec-left"> 
+                            <img src="images/btn_mobile_prev_cur.jpg" /> 
+                        </div> 
+                        <div id="spec-list"> 
+                            <ul class="list-h" style="width: 310px; overflow: hidden;">  
+                                <li>
+                                    <img src="images/2-1.jpg" style="border: 1px solid rgb(204, 204, 204); padding: 2px;" /> 
+                                </li> 
+                                <li>
+                                    <img src="images/2-2.jpg" style="border: 1px solid rgb(204, 204, 204); padding: 2px;" /> 
+                                </li> 
+                                <li>
+                                    <img src="images/2-3.jpg" style="border: 1px solid rgb(204, 204, 204); padding: 2px;" /> 
+                                </li> 
+                                <li>
+                                    <img src="images/2-4.jpg" style="border: 1px solid rgb(204, 204, 204); padding: 2px;" /> 
+                                </li> 
+                                <li>
+                                    <img src="images/1-1.jpg" style="border: 1px solid rgb(204, 204, 204); padding: 2px;" /> 
+                                </li> 
+                                <li>
+                                    <img src="images/1-2.png" style="border: 1px solid rgb(204, 204, 204); padding: 2px;" /> 
+                                </li> 
+                            </ul> 
+                        </div> 
+                        <div class="control" id="spec-right"> 
+                            <img src="images/btn_mobile_next_cur.jpg" /> 
+                        </div> 
+                    </div> 
+                </div>
+                <!-- wwww over--> 
+                <!-- 商品参数--> 
+                <div class="dl_goods_info"> 
+                    <h2 class="dginfo_h2">福佳（Hoegaarden） 白啤酒330ml 瓶装</h2> 
+                    <p>价格：<span class="dginfo_price">￥<em class="price" id="resetprice"> 13.90</em></span></p> 
+                    <ul class="dginfo_info"> 
+                        <li>销量：0</li> 
+                        <li class="dginfo_info_last">品牌：福佳<span></span></li> 
+                        <li> 
+                            <form action="/yershop/index.php?s=/Home/order/add.html" name="orderform" id="orform" method="post" onsubmit="return trySubmit()"> 
+                                <input type="hidden" name="id[]" value="85" /> 
+                                <input type="hidden" name="price[]" id="inputprice" value="13.90" /> 
+                                <input type="hidden" name="sort[]" id="inputsort" value="85" /> 
+                                <input type="hidden" name="parameters[]" id="inputparameters" /> 
+                                <p class=""><span class="quantity">数量：</span><span class="quantity-form"><a href="javascript:void(0)" class="jia" onclick="add()">+</a> <input type="text" class="goodnum" value="1" name="num[]" /><a onclick="reduce()" id="oneA" href="javascript:void(0)" class="jian">-</a></span></p> 
+                            </form>
+                        </li> 
+                    </ul> 
+                    <!-- buy--> 
+                    <div class="addcart_box">
+                        <a rel="nofollow" href="javascript:void(0)" onclick="addToCart();" class="dginfo_btn">加入购物车</a> 
+                    </div>  
+                </div> 
+                <!-- 商品参数 结束--> 
+            </div> 
+            <!-- 商品描述结束details_left_top--> 
+ 
+        </div> 
+    </body>
+</html>

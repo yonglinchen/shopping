@@ -1,0 +1,237 @@
+a, address, b, big, blockquote, body, center, cite, code, dd, del, div, dl, dt, em, 
+fieldset, font, form, h1, h2, h3, h4, h5, h6, html, i, iframe, img, ins, label, legend, li, ol, p, pre, small, span, strong, u, ul, var {
+    margin: 0;
+    padding: 0;}
+
+/*header*/
+.header {padding: 15px 0 10px;}
+.clearfix:after {content: ".";display: block;height: 0;clear: both;visibility: hidden;}
+.w {width: 990px;margin: 0 auto;}
+#logo {padding-left: 5px;float: left;position: relative;width: 270px;}
+a {color: #666;text-decoration: none;}
+img {border: 0;vertical-align: middle;}
+#logo .link2 {font-size:25px;overflow: hidden;display: block;position: absolute;width: 100px;height: 40px;line-height: 40px;top: 8px;right: 0;background: #fff;font-weight: bold;}
+/*商品描述*/
+.cart-filter-bar {margin-top: 10px;}
+.cart-filter-bar .switch-cart {float: left;position: relative;height: 26px;overflow: hidden;margin-bottom: 14px;}
+.cart-filter-bar .switch-cart li.curr, .cart-filter-bar .switch-cart li.curr a {color: #e4393c;}
+em, i, u {font-style: normal;}
+.cart-filter-bar .switch-cart li .number {font-family: verdana;font-size: 14px;}
+.cart-filter-bar .switch-cart li {float: left;font-weight: 700;font-size: 16px;height: 26px;line-height: 26px;text-align: center;padding: 0 0 10px;cursor: pointer;margin: 5px 30px 0 0;}
+.cart-filter-bar .w-line {position: relative;height: 1px;background: #e0e0e0;}
+.cart-filter-bar .w-line .floater {
+    position: absolute;
+    height: 2px;
+    background: #e4393c;
+    left: 0;
+    width: 80px;
+    overflow: hidden;}
+/*商品详细展示*/
+.cart-warp {background: #fff;margin-bottom: 20px;}
+.cart-main .cart-thead {display: inline-block;display: block;height: 32px;line-height: 32px;margin: 0 0 10px;padding: 5px 0;background: #f3f3f3;border: 1px solid #e9e9e9;border-top: 0;}
+.cart-main .cart-thead .column {float: left;}
+/*商品详细展示-标题*/
+.cart-main .cart-thead .t-checkbox {
+    height: 18px;
+    line-height: 18px;
+    padding-top: 7px;
+    width: 122px;
+    padding-left: 11px;
+}
+.cart-main .cart-thead .column {
+    float: left;
+}
+.cart-main-new .cart-thead .t-goods {
+    width: 208px;
+}
+.cart-main .cart-thead .t-props {
+    width: 80px;
+    height: 32px;
+    padding: 0 20px;
+}
+.cart-main-new .cart-thead .t-props {
+    width: 140px;
+}
+.cart-main .cart-thead .t-price {
+    width: 120px;
+    padding-right: 40px;
+    text-align: right;
+}
+.cart-main .cart-thead .t-quantity {
+    width: 80px;
+    text-align: center;
+}
+.cart-main .cart-thead .t-sum {
+    width: 100px;
+    padding-right: 40px;
+    text-align: right;
+}
+
+.cart-main .cart-thead .t-action {
+    width: 75px;
+}
+/*商品详细展示-内容*/
+.item-list {
+    border-style: solid;
+    border-width: 2px 1px 1px;
+    _border-width: 1px;
+    border-color: #aaa #f1f1f1 #f1f1f1;
+    background: #fff;
+}
+.cart-tbody .item-item {
+    position: relative;
+    padding: 0 10px 1px 40px;
+    border-top: 1px solid #c5c5c5;
+    line-height: 20px;
+    _height: 116px;
+    background: #fff;
+}
+.cart-tbody .item-selected, .cart-tbody .item-selected .single-header {
+    background: #fff4e8;
+}
+.item-list .item-full:first-child, .item-list .item-single:first-child, .item-list .item-suit:first-child {
+    border-top: 0;
+}
+.cart-tbody .item-item .item-form {
+    display: inline-block;
+    display: block;
+}
+
+
+.cart-tbody .item-item .cell {
+    float: left;
+    padding: 15px 0 10px;
+}
+.cart-tbody .item-item .p-checkbox {
+    position: absolute;
+    z-index: 3;
+    left: 10px;
+    top: 0;
+    width: 30px;
+    min-height: 10px;
+    _height: 10px;
+}
+.cart-main-new .cart-tbody .item-item .p-goods {
+    width: 300px;
+}
+.cart-main-new .cart-tbody .item-item .p-props-new, .cart-main-new .cart-tbody .item-item .p-props-new .props-txt {
+    width: 180px;
+}
+.cart-tbody .item-item .p-price {
+    width: 120px;
+    padding-right: 40px;
+    font-family: verdana;
+    text-align: right;
+}
+.cart-tbody .item-item .p-quantity {
+    width: 80px;
+}
+.cart-tbody .item-item .p-sum {
+    width: 100px;
+    padding-right: 40px;
+    text-align: right;
+    font-family: verdana;
+}
+.cart-tbody .item-item .p-ops {
+    width: 75px;
+}
+.cart-tbody .item-item .item-form:after {
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+
+.cart-tbody .item-item .p-quantity .quantity-form {
+    position: relative;
+    overflow: hidden;
+    height: 22px;
+    width: 80px;
+}
+.cart-tbody .item-item .p-quantity .decrement.disabled, .cart-tbody .item-item .p-quantity .increment.disabled {
+    cursor: default;
+    color: #e9e9e9;
+}
+.cart-tbody .item-item .p-quantity .decrement, .cart-tbody .item-item .p-quantity .increment {
+    border: 1px solid #cacbcb;
+    border-right: 0;
+    height: 18px;
+    line-height: 18px;
+    padding: 1px 0;
+    width: 16px;
+    text-align: center;
+    color: #666;
+    margin: 0;
+    background: #fff;
+}
+.cart-tbody .item-item .p-quantity .decrement {
+    float: left;
+}
+.cart-tbody .item-item .p-quantity .increment {
+    float: right;
+    border: 1px solid #cacbcb;
+    border-left: 0;
+    color: #666;
+}
+.cart-tbody .item-item .p-quantity .itxt {
+    position: absolute;
+    left: 17px;
+    top: 0;
+    border: 1px solid #cacbcb;
+    width: 42px;
+    height: 18px;
+    line-height: 18px;
+    text-align: center;
+    padding: 1px;
+    margin: 0;
+    font-size: 12px;
+    font-family: verdana;
+    color: #333;
+    -webkit-appearance: none;
+}
+.item-item .p-quantity .increment {
+    border: 1px solid #cacbcb;
+    border-right: 0;
+    height: 18px;
+    line-height: 18px;
+    padding: 1px 0;
+    width: 16px;
+    text-align: center;
+    color: #666;
+    margin: 0;
+    background: #fff;
+}
+.ftx-03, .ftx03, .gray, .grey {
+    color: #aaa;
+}
+.ac {
+    text-align: center;
+}
+/*结算信息*/
+.cart-toolbar {height: 50px;border: 1px solid #f0f0f0;background: #fff;position: relative;}
+.toolbar-wrap {position: relative;width: 988px;margin: 0 auto;}
+.toolbar-wrap .options-box {position: relative;height: 50px;}
+.toolbar-wrap .select-all {float: left;height: 18px;
+    line-height: 18px;padding: 16px 0 16px 9px;white-space: nowrap;}
+.cart-checkbox {
+    position: relative;z-index: 3;float: left;margin-right: 5px;}
+.cart-checkbox .jdcheckbox {
+    position: relative;float: none;vertical-align: middle;_vertical-align: -1px;margin: 0 3px 0 0;padding: 0;}
+.cart-checkbox label {display: none;}
+.toolbar-wrap .operation {float: left;height: 50px;width: 210px;line-height: 50px;}
+.toolbar-wrap .operation a {float: left;margin-left: 25px;color: #666;}
+.clear, .clr {display: block;overflow: hidden;clear: both;height: 0;line-height: 0;font-size: 0;}
+.toolbar-wrap .toolbar-right {position: absolute;height: 52px;right: 0;top: -1px;width: 710px;}
+.toolbar-wrap .toolbar-right .normal {height: 52px;}
+.toolbar-wrap .toolbar-right .normal .comm-right {
+    float: right;width: 710px;}
+.toolbar-wrap .btn-area {
+    float: right;}
+.toolbar-wrap .price-sum {
+    float: right;height: 43px;line-height: 20px;margin: 7px 20px 0 10px;color: #666;width: auto;}
+.toolbar-wrap .amount-sum {
+    float: right;color: #999;height: 44px;line-height: 20px;margin: 7px 0 0;cursor: pointer;}
+.toolbar-wrap .btn-area .common-submit-btn, .toolbar-wrap .btn-area .jdInt-submit-btn, .toolbar-wrap .btn-area .submit-btn {
+    display: block;position: relative;width: 96px;height: 52px;line-height: 52px;color: #fff;text-align: center;font-size: 18px;font-family: '\5fae\8f6f\96c5\9ed1';background: #e54346;overflow: hidden;}
+a:hover {color: #C81623;}
