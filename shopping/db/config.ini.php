@@ -1,10 +1,10 @@
 <?php
 if(!defined('_HOST'))
-    define ('_HOST','localhost');
+    define ('_HOST','192.168.110.78');
 if(!defined('_USER'))
-    define ('_USER','root');
+    define ('_USER','livedb');
 if(!defined('_PSW'))
-    define ('_PSW','root');
+    define ('_PSW','hexin');
 if(!defined('_DB'))
     define ('_DB','shopping');
 if(!defined('_PORT'))

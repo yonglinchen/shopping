@@ -3,7 +3,7 @@ include_once(dirname(dirname(__FILE__)) . "/db/config.ini.php");
 include_once(dirname(dirname(__FILE__)) . "/db/DbMysqli.class.php");
 include_once(dirname(__FILE__) . "/Cart.class.php");
 
-//$mysqliObj = new \DbMysqli(_HOST,_USER,_PSW,_DB,_PORT);//mysqli对象
+$mysqliObj = new \DbMysqli(_HOST,_USER,_PSW,_DB,_PORT);//mysqli对象
 
 $result_data = array(
 "status"=>0,

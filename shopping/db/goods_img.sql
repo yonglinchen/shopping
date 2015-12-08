@@ -1,22 +1,5 @@
-/*
-Navicat MySQL Data Transfer
-
-Source Server         : localhost_3306
-Source Server Version : 50621
-Source Host           : localhost:3306
-Source Database       : shopping
-
-Target Server Type    : MYSQL
-Target Server Version : 50621
-File Encoding         : 65001
-
-Date: 2015-12-07 11:57:39
-*/
-
-SET FOREIGN_KEY_CHECKS=0;
-
 -- ----------------------------
--- Table structure for `goods_img`
+-- Table structure for `goods_img`  商品关联图片信息
 -- ----------------------------
 DROP TABLE IF EXISTS `goods_img`;
 CREATE TABLE `goods_img` (
