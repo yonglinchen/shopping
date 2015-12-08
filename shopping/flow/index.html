@@ -12,6 +12,7 @@
         <script type="text/javascript" src="js/common.js" ></script> 
         <script type="text/javascript" src="js/sendAjax.js" ></script> 
         <script type="text/javascript" src="js/show.js" ></script> 
+        <script type="text/javascript" src="js/index.js" ></script> 
     </head> 
     <body> 
         <!--  start  ------------------------------------------------------> 
@@ -57,11 +58,11 @@
                 <!-- wwww over--> 
                 <!-- 商品参数--> 
                 <div class="dl_goods_info"> 
-                    <h2 class="dginfo_h2">福佳（Hoegaarden） 白啤酒330ml 瓶装</h2> 
-                    <p>价格：<span class="dginfo_price">￥<em class="price" id="resetprice"> 13.90</em></span></p> 
+                    <h2 class="dginfo_h2">123</h2> 
+                    <p>价格：<span class="dginfo_price">￥<em class="price shop_price" id="resetprice"></em></span></p> 
                     <ul class="dginfo_info"> 
-                        <li>销量：0</li> 
-                        <li class="dginfo_info_last">品牌：福佳<span></span></li> 
+                        <li class="dginfo_info_last">市场价：<span class="market_price"></span></li> 
+                        <li>重量：<span class='dginfo_weight'></span></li> 
                         <li> 
                             <form action="/yershop/index.php?s=/Home/order/add.html" name="orderform" id="orform" method="post" onsubmit="return trySubmit()"> 
                                 <input type="hidden" name="id[]" value="85" /> 
