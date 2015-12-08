@@ -26,7 +26,6 @@ class Cart {
      */
     public function addGood($goodId, $userId, &$result_data){
         //调用存储过程加入商品
-        $result_data["status"] = -1;
         return true;
     }
     

@@ -43,10 +43,10 @@ function addToCart(){
     arrList = JSON.stringify(arrList);
     apiSendAjax(send_url, arrList, true,function(status,data) {
         console.log(data);
-//        if(parseInt(status) == 0){
-//            window.location.href=rooturl + "/flow/addToCart.html";
-//        } else{
-//            window.location.href=rooturl + "/flow/errorToCart.html";
-//        }
+        if(parseInt(status) == 0){
+            window.location.href=rooturl + "/flow/addToCart.html";
+        } else{
+            window.location.href=rooturl + "/flow/errorToCart.html";
+        }
     });   
 }

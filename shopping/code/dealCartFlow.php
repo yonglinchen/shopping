@@ -3,15 +3,14 @@ include_once(dirname(dirname(__FILE__)) . "/db/config.ini.php");
 include_once(dirname(dirname(__FILE__)) . "/db/DbMysqli.class.php");
 include_once(dirname(__FILE__) . "/Cart.class.php");
 
-$mysqliObj = new \DbMysqli(_HOST,_USER,_PSW,_DB,_PORT);//mysqli对象
+//$mysqliObj = new \DbMysqli(_HOST,_USER,_PSW,_DB,_PORT);//mysqli对象
 
 $result_data = array(
 "status"=>0,
 "desc"=>"",
 "data"=>array()
 );
-$post_data = file_get_contents("php://input");
-
+$post_data = json_decode(file_get_contents("php://input"), true);
 switch ($post_data["action"]){
     case "showShopping"://展示商品
         $sql_retrieveGood = "select gd.goods_name,gd.goods_number,gd.goods_weight,gd.goods_desc from goods as gd where  gd.goods_id=1";
@@ -28,10 +27,10 @@ switch ($post_data["action"]){
         }
         break;
     case "addToCart"://添加商品到购物车
-        $goodId = $post_data["goodId"];
-        $userId = $post_data["userId"];
-        $cart = new Cart();
-        $cart->addGood($goodId, $userId, &$result_data);
+//        $goodId = $post_data["goodId"];
+//        $userId = $post_data["userId"];
+//        $cart = new Cart();
+//        $cart->addGood($goodId, $userId, &$result_data);
         break;
     case "retrieveGoodList"://检索购物车商品列表
         $userId = $post_data["userId"];
