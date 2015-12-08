@@ -19,7 +19,7 @@ function dealCartFlow($body){
             $_goodids = $mysqliObj->get_all($sql_GoodIds);
             
             foreach($_goodids as $key => $_goodid){
-               $sql_retrieveGood = "select goods_name, goods_number, goods_weight,goods_desc from goods where goods_id=" . $_goodid["goods_id"]; 
+               $sql_retrieveGood = "select goods_id, goods_name, goods_number, goods_weight,goods_desc from goods where goods_id=" . $_goodid["goods_id"]; 
                $sql_retrieveGoodImgList = "select gimg.good_img, gimg.master "
                 . "from goods as gd join goods_img gimg on gd.goods_id = gimg.goods_id where gd.goods_id=" . $_goodid["goods_id"];
                $shopData  = $mysqliObj->real_get($sql_retrieveGood);   
