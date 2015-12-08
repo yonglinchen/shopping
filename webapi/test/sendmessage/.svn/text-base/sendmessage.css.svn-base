@@ -1,0 +1,20 @@
+.textcss{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.contact{
+    width: 200px
+}
+.dismessage{
+    disabled:block;
+}
+.wrongcss{
+    color:red;
+}
+.sendmsg{
+    color:white;
+    background-color: blue;
+}
+.code{
+      width: 100px
+}

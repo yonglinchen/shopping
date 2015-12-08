@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/hxyf/!svn/ver/20117/qstbp/components/webapi/mail
+END
+a.jpg
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/hxyf/!svn/ver/19667/qstbp/components/webapi/mail/a.jpg
+END
+sendmail.php
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/hxyf/!svn/ver/20117/qstbp/components/webapi/mail/sendmail.php
+END
+b.png
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/hxyf/!svn/ver/19667/qstbp/components/webapi/mail/b.png
+END
+class.phpmailer.php
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/hxyf/!svn/ver/19667/qstbp/components/webapi/mail/class.phpmailer.php
+END
+class.smtp.php
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/hxyf/!svn/ver/19667/qstbp/components/webapi/mail/class.smtp.php
+END

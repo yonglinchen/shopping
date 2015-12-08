@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/hxyf/!svn/ver/20146/qstbp/components/webapi/pay/pc_pay/alipaybank/lib
+END
+alipay_core.function.php
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svn/hxyf/!svn/ver/20146/qstbp/components/webapi/pay/pc_pay/alipaybank/lib/alipay_core.function.php
+END
+alipay_notify.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/svn/hxyf/!svn/ver/20146/qstbp/components/webapi/pay/pc_pay/alipaybank/lib/alipay_notify.class.php
+END
+alipay_submit.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/svn/hxyf/!svn/ver/20146/qstbp/components/webapi/pay/pc_pay/alipaybank/lib/alipay_submit.class.php
+END
+alipay_md5.function.php
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/svn/hxyf/!svn/ver/20146/qstbp/components/webapi/pay/pc_pay/alipaybank/lib/alipay_md5.function.php
+END

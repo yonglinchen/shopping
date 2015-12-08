@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>支付</title>
+        <link href="pay.css" rel="stylesheet" /> 
+        <script type="text/javascript" src="../common/jquery-1.7.2.min.js" ></script>
+        <script type="text/javascript" src="../common/placeholder.js"></script>
+        <script type="text/javascript" src="../../libcode/js/jsapi/base.js" ></script>
+        <script type="text/javascript" src="../../libcode/js/jsapi/md5.js" ></script>
+        <script type="text/javascript" src="pay.js" ></script>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <div>支付测试</div> 
+        <div class="textcss">
+            <button id="createorder" class="sendmsg">生成订单</button> 
+            <span></span>
+            <input id="order_no" style="display: none"/>
+        </div>
+         <div class="textcssnew">
+           
+        </div>
+        <div class="textcss">
+            <button id="sendmsg" class="sendmsg">支付宝支付</button> 
+            <span></span>         
+            <button id="sendbank" class="sendmsg">网银支付</button> 
+            <span></span>
+        </div>
+        <div class="textcss">
+            <button id="apppay" class="sendmsg">模拟app支付宝支付</button> 
+            <span></span>
+        </div>
+        <div class="textcss">
+            <button id="appverifysign" class="sendmsg">模拟app支付宝验签</button> 
+            <span></span>
+        </div>
+        <div class="textcss">
+            <button id="alicallback" class="sendmsg">模拟app支付宝回调</button> 
+            <span></span>
+        </div>
+        <div class="textcss">
+            <button id="webpay" class="sendmsg">模拟web支付宝支付</button> 
+            <span></span>
+        </div>
+         <div class="textcssnew">
+           
+        </div>
+        <div class="textcss">
+            <button id="appwxpay" class="sendmsg">模拟app微信支付</button> 
+            <span></span>
+        </div>  
+        <div class="textcss">
+            <button id="wxcheck" class="sendmsg">微信对账</button> 
+            <span></span>
+        </div>
+        <div class="textcss">
+            <button id="wxcallback" class="sendmsg">模拟微信回调</button> 
+            <span></span>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,17 @@
+
+<html>
+    <head>
+        <title>验证绑定邮箱</title>
+        <link href="bindcontact.css" rel="stylesheet" /> 
+        <script type="text/javascript" src="../common/jquery-1.7.2.min.js" ></script>
+        <script type="text/javascript" src="../common/placeholder.js"></script>
+        <script type="text/javascript" src="../../libcode/js/jsapi/base.js" ></script>
+        <script type="text/javascript" src="bindcheck.js" ></script>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <div>绑定邮箱</div>
+        <span class="wrongcss"></span>    
+    </body>
+</html>

@@ -1,0 +1,58 @@
+div, span,q,small,strong,button,tt, b, u, i, dl, dt, dd, ol, ul, li,form, label, legend, table, caption, tbody, tfoot, thead, tr, th,td{ margin: 0; padding: 0; border: 0; font-size: 100%;  vertical-align: baseline; font-weight: normal; font-style: normal; font-size:14px;}
+html,body{font-family:"微软雅黑","Arial Narrow",Tahoma,Arial,Helvetica,STHeiti;font-size:14px;color: #202020;}
+table { border-collapse: collapse; border-spacing: 0; }
+img,input,button,a,select,textarea,button,body,iframe{ margin: 0; padding: 0; resize:none; background: none; border:0; outline:none; }
+ol,ul { list-style:none; }
+input:focus{outline: none;}
+h1,h2,h3,h4,h5,h6,p,em{margin:0;padding:0; font-size:100%; font-weight: normal; word-wrap:break-word;font-style: normal; }
+a:active, a:focus{ outline:none; }
+table{ border-collapse:collapse; border-spacing:0; }
+img{ vertical-align: middle; }
+a{color:#0000cc;text-decoration: none; cursor: pointer; }
+label {vertical-align: middle;}
+a:link,a:visited{color:#333;}
+a:hover{color:#333;}
+.left{float:left;}
+.right{float:right;}
+.i{color: #ff5a01;}
+body{margin: 0px auto; padding: 30px;}
+.txt_align{text-align:center;}
+#titlebtn{font-size:16px; font-family: '微软雅黑';height:50px; width:829px; line-height: 50px;}
+#titlebtn span a{text-decoration: none; color:#E0368F; padding-left: 30px;}
+#container{width: 100%; height: auto;display: inline-block;}
+/*创建相册*/
+.createbtn{background: url('../images/create1.png') no-repeat;width:100px;height:35px;color:#fff;font-size: 14px;font-family: '微软雅黑'; cursor: pointer;margin-right: 20px;}
+/*上传图片*/
+.uploadbtn{background: url('../images/upload1.png') no-repeat;width:100px;height:35px;color:#fff; margin-right: 20px;font-size: 14px;font-family: '微软雅黑';cursor: pointer;}
+.albumlst {float: left;width: 165px;height: 195px;padding: 10px 10px 0px 10px;box-shadow: 5px 5px 5px 0px #999;background: #fff; margin-right: 20px;border: 3px solid rgb(238, 238, 238);}
+.albumlst .pal {height: 80%;}
+.albumlst .pal img{height: 100%;width:100%;}
+.albumlst_r {vertical-align: bottom;color: #777777;overflow: hidden;padding-top: 4px;word-wrap: break-word;width:100%;}
+.pd05 { padding: 0px 5px;font-size: 12px;height: 20px;position: relative;margin-top: 5px;}
+.pdo5 a{position: absolute;left: 0px;}
+.pd05 input{position: absolute;right: 0px;}
+/*弹出窗口*/
+/*创建相册*/
+.photoinput {background: transparent url("../images/create.png") no-repeat scroll 0% 0%;width: 240px;height: 40px;padding-left: 10px;font-size: 14px;font-family: "微软雅黑";}
+div.create_photo{width: 350px;margin: 0px auto;margin-top: 20px;margin-bottom: 20px;}
+div.create_photo p.create_button{margin-top: 40px;text-align: center;}
+div.create_photo p.create_button input{width: 108px;height: 38px;color:#fff; margin-left: 20px;}
+div.create_photo input.confirmbtn { background: #E5007F none repeat scroll 0% 0%;}
+div.create_photo input.canelbtn {background: #5D687A none repeat scroll 0% 0%;}
+/*上传*/
+input.file_upload{opacity: 0;position: absolute;left: 120px;}
+
+/*创建相册按钮颜色end*/
+#photoinfo{ width:804px;height:120px;padding-left: 50px;padding-top: 30px;}
+#photoinfo .left,#photoinfo .left img{ width:103px;height:102px;float: left;}
+#photoinfo .right{width:300px;height:97px;float: left;padding-top: 5px;margin-left: 30px;}
+#photoinfo .right .name{font-family: '微软雅黑';font-size: 24px;padding-right: 10px;}
+#photoinfo .right .amount{font-family: '微软雅黑';font-size: 12px;position: relative;top:4px;}
+#photoinfo .right .butn{padding-top: 20px;padding-left: 2px;font-size: 14px; font-family: '微软雅黑';}
+#batch_operation{width: 105px;height: 35px;background: #5D687A none repeat scroll 0% 0%;font-size: 14px;font-family: "微软雅黑";color: #FFF; cursor: pointer;}
+
+/*查看相册*/
+#showhiden{overflow: hidden;float: left;}
+.batchremove {
+    display: none;
+}

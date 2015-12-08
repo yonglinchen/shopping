@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>头像裁切预览</title>
+        <link rel="stylesheet" href="css/style.css" type="text/css" />
+        <link rel="stylesheet" href="css/upload-1.0.css" type="text/css" />
+        <script type="text/javascript" src="../../libcode/js/js3party/jquery-1.7.2.min.js"></script>
+        <script type="text/javascript" src="../../libcode/js/jsapi/base.js" ></script>
+        <script type="text/javascript" src="../../libcode/js/js3party/cropbox.js"></script>
+        <script type="text/javascript" src="../../libcode/js/js3party/ajaxfileupload.js" ></script>
+        <script src="js/test.js" type="text/javascript"></script>
+    </head>
+    <body>
+        <div class="container">
+          <div class="imageBox">
+            <div class="thumbBox"></div>
+            <div class="spinner" style="display: none">Loading...</div>
+          </div>
+          <div class="action"> 
+            <!-- <input type="file" id="file" style=" width: 200px">-->
+            <div class="new-contentarea tc"> <a href="javascript:void(0)" class="upload-img">
+              <label for="upload-file">选择图像</label>
+              </a>
+              <input type="file" class="" name="uploadfile" id="uploadfile" />
+            </div>
+            <input type="button" id="btnCrop"  class="Btnsty_peyton" value="裁切">
+<!--            <input type="button" id="btnZoomIn" class="Btnsty_peyton" value="+"  >
+            <input type="button" id="btnZoomOut" class="Btnsty_peyton" value="-" >-->
+          </div>
+          <div class="cropped"></div>
+
+          <div class="info-tip-dialog">
+                <div class="info-tip-contentDiv">
+                    <div class="info-tip-preloader loading"></div>
+                    <div class="info-tip-content">正在处理...</div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

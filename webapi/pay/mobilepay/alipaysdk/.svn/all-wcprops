@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/hxyf/!svn/ver/20210/qstbp/components/webapi/pay/mobilepay/alipaysdk
+END
+log.txt
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/hxyf/!svn/ver/20210/qstbp/components/webapi/pay/mobilepay/alipaysdk/log.txt
+END
+notify_url.php
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/hxyf/!svn/ver/20210/qstbp/components/webapi/pay/mobilepay/alipaysdk/notify_url.php
+END
+cacert.pem
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/hxyf/!svn/ver/20210/qstbp/components/webapi/pay/mobilepay/alipaysdk/cacert.pem
+END
+alipay.config.php
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/hxyf/!svn/ver/20210/qstbp/components/webapi/pay/mobilepay/alipaysdk/alipay.config.php
+END
+readme.txt
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/hxyf/!svn/ver/20210/qstbp/components/webapi/pay/mobilepay/alipaysdk/readme.txt
+END

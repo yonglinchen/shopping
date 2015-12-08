@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>图文验证码</title>
+        <link href="piccode.css" rel="stylesheet" /> 
+        <script type="text/javascript" src="../common/jquery-1.7.2.min.js" ></script>
+        <script type="text/javascript" src="../../libcode/js/jsapi/base.js" ></script>
+        <script type="text/javascript" src="piccode.js" ></script>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <div></div>
+        <br>
+        <div class='contentd'>
+            <img class="piccodeclass" src="" onclick="getPicCode('piccode')" id="piccode" /><br><br>
+            <!--<img class="piccodeclass" src="../../verifycode/getCode.php" onclick="getPicCode(fileurl,'piccode1')" id="piccode1" /><br><br>-->
+            请输入验证码： 
+            <input type="text" id='codeinfo'/><br><br>
+            <span>
+            <button onclick='checkcode()' />验证</button>
+            <img class="" src=""  id="notice" alt='结果'/><br>
+            </span>
+        </div>
+    </body>
+</html>

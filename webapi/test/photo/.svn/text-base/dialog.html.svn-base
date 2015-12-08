@@ -1,0 +1,105 @@
+ <div id="FaustCplus" class="FaustCplus">
+        <div id="altContent"></div>
+        <!--div>
+            <input display="hiddle" type="button" onclick="swfobject.getObjectById('FaustCplus').jscall_updateAvatar();" value="JS Call Upload"/>
+        </div-->
+        <div id="avatar_priview"></div>
+        <script type="text/javascript" src="../../../Public/js/user/swfobject.js"></script>
+        <script type="text/javascript">
+                    var flashvars = {
+                        "jsfunc": "uploadevent",
+                        "imgUrl": "../../../Public/images/photo/defalut_album_face.jpg",
+                        "pid": "75642723",
+                        "uploadSrc": true,
+                        "showBrow": true,
+                        "showCame": true,
+                        "uploadUrl": "upload_pic/action/uploadavatar"
+                    };
+
+                    var params = {
+                        menu: "false",
+                        scale: "noScale",
+                        allowFullscreen: "true",
+                        allowScriptAccess: "always",
+                        wmode: "transparent",
+                        bgcolor: "#FFFFFF"
+                    };
+
+                    var attributes = {
+                        id: "FaustCplus"
+                    };
+//                    swfobject.embedSWF("../../../Public/swf/FaustCplus.swf", "altContent", "650", "500", "9.0.0", "expressInstall.swf", flashvars, params, attributes);
+
+        </script>
+        <!--创建相册的div-->
+        <div style=" margin-left:35px; margin-top: 30px; height: 160px;">
+            <form method="POST" action="__ROOT__/index.php?m=user&c=photo&a=create_album">
+                <label style="font-size: 16px; font-family: '微软雅黑'; color:#221814;">相册名称：</label>
+                <input class="photoinput" name="c_albumname" id="c_albumname" value = '' maxlength="8" onkeyup ="inputnamechange(this.value)" />
+                &nbsp;&nbsp;<span style="font-size: 14px; font-family: '微软雅黑';"><input id="userinput" type="text" disabled="true" style="width: 10;background: #fff; width:40px" value="0/8"></span>
+            <br>
+<!--            相册介绍：
+            <textarea style="width:200px;height:100px;" name="c_albumdesc" id="c_albumdesc" value=''></textarea>-->
+            <br>
+            <br>
+            <p style="padding-left: 85px;">
+                <input type="hidden" name="token" value="{$_SESSION['token']}" />
+                <input class="confirmbtn" type="button" onclick="create_album()"  value="确认" style="height: 38px; width: 108px; font-size: 14px; font-family: '微软雅黑';color:#fff; margin-right: 20px;"/>
+            <a href="__ROOT__/index.php?m=user&c=photo&a=index">
+                <input class="canelbtn" type="button" value="取消" style="height: 38px; width: 108px;font-size: 14px; font-family: '微软雅黑';color:#fff;"/>
+            </a>
+            </p>
+            </form>
+        </div>
+
+    </div> 
+    <div id="uploadphoto" style="width:500px;height:200px;text-align: center;clear:both;">
+        <p style="height: 70px; padding-top: 30px; font-size: 16px; font-family: '微软雅黑'">相册创建成功、是否要上传照片？</p>
+        <p><input class="confirmbtn" type="button" onclick="upload_photo()"  value="上传图片" style="height: 38px; width: 108px; font-size: 14px; font-family: '微软雅黑';color:#fff; margin-right: 20px;"/>
+            <a href="__ROOT__/index.php?m=user&c=photo&a=index">
+                <input class="canelbtn" type="button" value="取消" style="height: 38px; width: 108px;font-size: 14px; font-family: '微软雅黑';color:#fff;"/>
+            </a></p>
+    </div>
+
+<div id="uploading" style=" margin-left:35px; margin-top: 30px; height: 160px;">
+          <form method="POST" action="__ROOT__/index.php?m=user&c=photo&a=add_photo_comfirm">
+                <label style="font-size: 16px; font-family: '微软雅黑'; color:#221814;">上传到：</label>
+                 <select  name="albumname" id="albumname" class="form-control photoinput" onchange="select_contact(this.value);" style="font-size: 14px; font-family: '微软雅黑';border:0px;" >
+                    <option value="">请选择您的相册</option>
+                    <foreach name="albumnamelist" item="albumva">
+                        <option  value="{$albumva.id}">{$albumva.name}</option>
+                    </foreach>
+          </select>
+                &nbsp;&nbsp;
+            <br>
+<!--            相册介绍：
+            <textarea style="width:200px;height:100px;" name="c_albumdesc" id="c_albumdesc" value=''></textarea>-->
+            <br>
+            <br>
+            <p style="padding-left: 70px; margin-bottom: 20px;">
+                <input type="hidden" name="token" value="{$_SESSION['token']}" />
+                <!--<input class="confirmbtn" type="button" onclick=file_upload.click()  value="选择照片" style="height: 38px; width: 108px; font-size: 14px; font-family: '微软雅黑';color:#fff; margin-right: 20px;"/>-->
+                <!--<input type="file" style="display: none" id="file_upload1" />-->
+                <input id="file_upload" name="file_upload" type="file" multiple="true">
+            <a href="__ROOT__/index.php?m=user&c=photo&a=index">
+                <input class="canelbtn" type="button" value="取消" style="height: 38px; width: 108px;font-size: 14px; font-family: '微软雅黑';color:#fff;"/>
+                <!--<input id="addtime" name="addtime" type="text" style="display: none" value="11" />-->
+            </a>
+            </p>
+            </form>
+ </div>
+    
+<div id="batchdelete" style="width:500px;height:200px;text-align: center; clear:both;">
+    <p style="height: 70px; padding-top: 30px; font-size: 16px; font-family: '微软雅黑'" > 
+        <input style="background: #fff;color:#221814;font-size: 16px; font-family: '微软雅黑';width:200px; padding-bottom: 20px;" disabled="true" type="text" name="photocount" id="photocount" value="您确定要删除这些相册？"/>
+        
+        <br/><span style="font-size: 16px; font-family: '微软雅黑'">如果确认，则相册中所含的照片将全部删除!!</span>
+    </p>
+    <p style="margin-top: 20px;"><input class="confirmbtn" type="button" onclick="delete_photo_inbatch()"  value="删除" style="height: 38px; width: 108px; font-size: 14px; font-family: '微软雅黑';color:#fff; margin-right: 20px;"/>
+        <a href="__ROOT__/index.php?m=user&c=photo&a=index">
+            <input class="canelbtn" type="button" value="取消" style="height: 38px; width: 108px;font-size: 14px; font-family: '微软雅黑';color:#fff;"/>
+        </a>
+    </p>
+    <input type="text" value="" style="display: none" id="albumid_del" name="albumid_del" />
+    <!--<input type="text" value="" style="display: none" id="albumid_del_photostr" name="albumid_del_photostr" />-->
+</div>

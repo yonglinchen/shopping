@@ -1,0 +1,53 @@
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/hxyf/!svn/ver/20210/qstbp/components/webapi/pay/pc_pay/alipaybank
+END
+alipayapi.php
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/hxyf/!svn/ver/20210/qstbp/components/webapi/pay/pc_pay/alipaybank/alipayapi.php
+END
+log.txt
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/hxyf/!svn/ver/20146/qstbp/components/webapi/pay/pc_pay/alipaybank/log.txt
+END
+notify_url.php
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/hxyf/!svn/ver/20187/qstbp/components/webapi/pay/pc_pay/alipaybank/notify_url.php
+END
+cacert.pem
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/hxyf/!svn/ver/20146/qstbp/components/webapi/pay/pc_pay/alipaybank/cacert.pem
+END
+return_url.php
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/hxyf/!svn/ver/20187/qstbp/components/webapi/pay/pc_pay/alipaybank/return_url.php
+END
+alipay.config.php
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/hxyf/!svn/ver/20187/qstbp/components/webapi/pay/pc_pay/alipaybank/alipay.config.php
+END
+readme.txt
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/hxyf/!svn/ver/20146/qstbp/components/webapi/pay/pc_pay/alipaybank/readme.txt
+END
+index.php
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/hxyf/!svn/ver/20146/qstbp/components/webapi/pay/pc_pay/alipaybank/index.php
+END

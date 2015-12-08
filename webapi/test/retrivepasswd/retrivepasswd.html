@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>用户找回密码</title>
+        <link href="retrivepasswd.css" rel="stylesheet" /> 
+        <script type="text/javascript" src="../common/jquery-1.7.2.min.js" ></script>
+        <script type="text/javascript" src="../common/placeholder.js"></script>
+        <script type="text/javascript" src="../../libcode/js/jsapi/base.js" ></script>
+        <script type="text/javascript" src="../../libcode/js/jsapi/md5.js" ></script>
+        <script type="text/javascript" src="retrivepasswd.js" ></script>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <div>找回密码</div>
+        <div>
+       <div class="textcss">
+            <input type ="text" id="tel" class="tel" placeholder="手机号" maxlength="11"/>
+            <span class="wrongcss"></span>
+        </div>
+        <div class="textcss">
+            <input type="text" id="code" class='code' placeholder='请输入验证码' />
+            <button id="sendmsg" class="sendmsg">发送验证码</button> 
+            <span class="wrongcss"></span>
+        </div>
+        <div>
+            <button id='checktel' onclick='checktel()'>验证</button>
+            <span class="wrongcss"></span>
+        </div>
+        </div>
+        <div>
+        <div class="textcss">
+            <input type ="text" id="email" class="email" placeholder="邮箱"/>
+            <span class="wrongcss"></span>
+        </div>
+        <div>
+            <button id='sendemal' onclick='sendemal()' class="sendmsg">发送邮件</button>
+            <span class="wrongcss"></span>
+        </div>
+        </div>
+        
+        <div class="updatepwd">
+        <div>修改密码</div>
+        <div class="textcss">
+            <input type ="password" id="passwd1" value="" placeholder="新密码,6~16字符"/> <span  class="wrongcss"></span>
+        </div>
+        <div class="textcss">
+            <input type ="password" id="passwd2" value="" placeholder="新密码again,6~16字符"/> <span  class="wrongcss"></span>
+        </div>
+        <div>
+            <button id="updatepasswd" class="sendmsg" onclick="updatepasswd()">修改密码</button> 
+            <span></span>
+        </div>
+        </div>
+    </body>
+</html>

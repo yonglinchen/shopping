@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/hxyf/!svn/ver/20110/qstbp/components/webapi/db/table
+END
+qst_user_bind.sql
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/hxyf/!svn/ver/19990/qstbp/components/webapi/db/table/qst_user_bind.sql
+END
+qst_user.sql
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/hxyf/!svn/ver/20110/qstbp/components/webapi/db/table/qst_user.sql
+END
+qst_user_verify.sql
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/hxyf/!svn/ver/19990/qstbp/components/webapi/db/table/qst_user_verify.sql
+END
+qst_order_code.sql
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/hxyf/!svn/ver/19997/qstbp/components/webapi/db/table/qst_order_code.sql
+END
+qst_user_info.sql
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/hxyf/!svn/ver/19990/qstbp/components/webapi/db/table/qst_user_info.sql
+END

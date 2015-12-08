@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+          <link href="retrivepasswd.css" rel="stylesheet" /> 
+        <script type="text/javascript" src="../common/jquery-1.7.2.min.js" ></script>
+        <script type="text/javascript" src="../common/placeholder.js"></script>
+        <script type="text/javascript" src="../../libcode/js/jsapi/base.js" ></script>
+        <script type="text/javascript" src="../../libcode/js/jsapi/md5.js" ></script>
+        <script type="text/javascript" src="rtpasswdcheck.js" ></script>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>设置新密码</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <span id="wrong"></span>
+        <div class="updatepwd">
+        <div >设置新密码</div>
+        <div class="textcss">
+            <input type ="password" id="passwd1" value="" placeholder="新密码,6~16字符"/> <span  class="wrongcss"></span>
+        </div>
+        <div class="textcss">
+            <input type ="password" id="passwd2" value="" placeholder="新密码again,6~16字符"/> <span  class="wrongcss"></span>
+        </div>
+        <div>
+            <button id="updatepasswd" >更改</button>
+            <span></span>
+        </div>
+          </div>
+    </body>
+</html>

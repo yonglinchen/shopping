@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/hxyf/!svn/ver/20145/qstbp/components/webapi/pay/mobile_pay/openssl
+END
+ssleay32.dll
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/hxyf/!svn/ver/20145/qstbp/components/webapi/pay/mobile_pay/openssl/ssleay32.dll
+END
+libeay32.dll
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/hxyf/!svn/ver/20145/qstbp/components/webapi/pay/mobile_pay/openssl/libeay32.dll
+END
+php_openssl.dll
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/hxyf/!svn/ver/20145/qstbp/components/webapi/pay/mobile_pay/openssl/php_openssl.dll
+END

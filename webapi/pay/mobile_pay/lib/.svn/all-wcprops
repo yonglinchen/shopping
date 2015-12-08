@@ -1,0 +1,65 @@
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/hxyf/!svn/ver/20145/qstbp/components/webapi/pay/mobile_pay/lib
+END
+AlipayMd5.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/hxyf/!svn/ver/20145/qstbp/components/webapi/pay/mobile_pay/lib/AlipayMd5.class.php
+END
+AlipayRsa.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/hxyf/!svn/ver/20145/qstbp/components/webapi/pay/mobile_pay/lib/AlipayRsa.class.php
+END
+alipay_core.function.php
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/hxyf/!svn/ver/20145/qstbp/components/webapi/pay/mobile_pay/lib/alipay_core.function.php
+END
+alipay_notify.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/hxyf/!svn/ver/20145/qstbp/components/webapi/pay/mobile_pay/lib/alipay_notify.class.php
+END
+AlipayCore.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/hxyf/!svn/ver/20145/qstbp/components/webapi/pay/mobile_pay/lib/AlipayCore.class.php
+END
+AlipayNotify.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/hxyf/!svn/ver/20145/qstbp/components/webapi/pay/mobile_pay/lib/AlipayNotify.class.php
+END
+alipay_submit.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/hxyf/!svn/ver/20145/qstbp/components/webapi/pay/mobile_pay/lib/alipay_submit.class.php
+END
+AlipaySubmit.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/hxyf/!svn/ver/20145/qstbp/components/webapi/pay/mobile_pay/lib/AlipaySubmit.class.php
+END
+alipay_md5.function.php
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/hxyf/!svn/ver/20145/qstbp/components/webapi/pay/mobile_pay/lib/alipay_md5.function.php
+END
+alipay_rsa.function.php
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/hxyf/!svn/ver/20145/qstbp/components/webapi/pay/mobile_pay/lib/alipay_rsa.function.php
+END

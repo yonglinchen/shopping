@@ -1,0 +1,17 @@
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/hxyf/!svn/ver/20145/qstbp/components/webapi/pay/mobile_pay/key
+END
+alipay_public_key.pem
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/hxyf/!svn/ver/20145/qstbp/components/webapi/pay/mobile_pay/key/alipay_public_key.pem
+END
+rsa_private_key.pem
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/hxyf/!svn/ver/20145/qstbp/components/webapi/pay/mobile_pay/key/rsa_private_key.pem
+END

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8"> 
+        <title>单个文件上传-测试程序</title>
+        <link rel="stylesheet" href="./css/upload-1.0.css" type="text/css" />
+        <script type="text/javascript" src="../../libcode/js/js3party/jquery-1.7.2.min.js"></script>
+        <script type="text/javascript" src="../../libcode/js/jsapi/base.js" ></script>
+        <script type="text/javascript" src="../../libcode/js/js3party/ajaxfileupload.js"></script>
+        <script src="./test.js" type="text/javascript"></script>
+    </head>
+    <body>
+        <h1>单个文件上传实例</h1>
+        <a href="JavaScript:;" class="upload-a" >
+            <input class="upload-input" type="file" id="uploadfile" name="uploadfile"/>
+            文件上传
+        </a>
+        先上传，再下载<input type="button" value="下载文件" onclick="downfile()"/>
+        <div class="upload-display"></div>
+        <div class="info-tip-dialog">
+            <div class="info-tip-contentDiv">
+                <div class="info-tip-preloader loading"></div>
+                <div class="info-tip-content">正在处理...</div>
+            </div>
+        </div>
+    </body>
+</html>
+
+

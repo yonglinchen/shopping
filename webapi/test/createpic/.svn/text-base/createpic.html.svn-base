@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>生成图片</title>
+        <link href="createpic.css" rel="stylesheet" /> 
+        <script type="text/javascript" src="../common/jquery-1.7.2.min.js" ></script>
+        <script type="text/javascript" src="../common/placeholder.js"></script>
+        <script type="text/javascript" src="../../libcode/js/jsapi/base.js" ></script>
+        <script type="text/javascript" src="createpic.js" ></script>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <div>生成图片</div>
+        <div class="textcss">
+            <input type ="text" id="inputtext" value="" placeholder="请填写关键字1~16" maxlength="16"/>
+            <button id="sendmsg" class="sendmsg">生成图片</button> 
+            <span></span>
+        </div>
+        <div>
+            <img src="" id="destimg" class="" border="1" />
+        </div>
+        
+        
+        <div>生成图片，保存在服务器</div>
+        <div class="textcss">
+            <input type ="text" id="inputtextserver" value="" placeholder="请填写关键字1~16" maxlength="16"/>
+            <button id="sendmsgserver" class="sendmsg">生成图片</button> 
+            <span></span>
+        </div>
+    </body>
+</html>

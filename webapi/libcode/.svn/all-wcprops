@@ -1,0 +1,71 @@
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/hxyf/!svn/ver/20220/qstbp/components/webapi/libcode
+END
+base.php
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/hxyf/!svn/ver/20186/qstbp/components/webapi/libcode/base.php
+END
+ilog.php
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/hxyf/!svn/ver/20120/qstbp/components/webapi/libcode/ilog.php
+END
+ver.php
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/hxyf/!svn/ver/19640/qstbp/components/webapi/libcode/ver.php
+END
+def.php
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/hxyf/!svn/ver/20186/qstbp/components/webapi/libcode/def.php
+END
+imysql.php
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/hxyf/!svn/ver/20186/qstbp/components/webapi/libcode/imysql.php
+END
+Utils.php
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/hxyf/!svn/ver/19640/qstbp/components/webapi/libcode/Utils.php
+END
+HttpClient.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/hxyf/!svn/ver/19640/qstbp/components/webapi/libcode/HttpClient.class.php
+END
+errcode.php
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/hxyf/!svn/ver/20209/qstbp/components/webapi/libcode/errcode.php
+END
+session.php
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/hxyf/!svn/ver/20139/qstbp/components/webapi/libcode/session.php
+END
+fun.php
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/hxyf/!svn/ver/20120/qstbp/components/webapi/libcode/fun.php
+END
+ihttp.php
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/hxyf/!svn/ver/20120/qstbp/components/webapi/libcode/ihttp.php
+END

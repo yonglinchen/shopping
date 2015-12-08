@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>发送手机短信验证码</title>
+        <link href="sendmessage.css" rel="stylesheet" /> 
+        <script type="text/javascript" src="../common/jquery-1.7.2.min.js" ></script>
+        <script type="text/javascript" src="../common/placeholder.js"></script>
+        <script type="text/javascript" src="../../libcode/js/jsapi/base.js" ></script>
+        <script type="text/javascript" src="sendmessage.js" ></script>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <div>短信验证码</div>
+        <div class="textcss">
+            <input type ="text" id="contact" class="contact" placeholder="手机号" maxlength="11"/>
+            <span class="wrongcss"></span>
+        </div>
+        <div class="textcss">
+            <input type="text" id="code" class='code' placeholder='请输入验证码' />
+            <button id="sendmsg" class="sendmsg">发送验证码</button> 
+            <span class="wrongcss"></span>
+        </div>
+        <div>
+            <button id='checkcode' onclick='checkcode()'>验证</button>
+            <span class="wrongcss"></span>
+        </div>
+    </body>
+</html>

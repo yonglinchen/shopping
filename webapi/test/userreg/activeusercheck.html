@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>用户注册验证</title>
+        <link href="userreg.css" rel="stylesheet" /> 
+        <script type="text/javascript" src="../common/jquery-1.7.2.min.js" ></script>
+        <script type="text/javascript" src="../common/placeholder.js"></script>
+        <script type="text/javascript" src="../../libcode/js/jsapi/base.js" ></script>
+        <script type="text/javascript" src="userreg.js" ></script>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <span id="sendmsg" class="sendmsg">邮箱注册</span> 
+        <span></span>
+
+        <script>
+            var url = window.location.href;
+            var mark = getvaluebykey(url, 'mark');
+            var email = getvaluebykey(url, 'email');
+            var userid = getvaluebykey(url, 'userid');
+            var ret = activeusercheck(email, mark, userid);
+            apiInterface(ret, function(status, data) {
+                console.log(data);
+                if (status == 0) {
+                    $("#sendmsg").text('注册成功');
+                }
+                else {
+                    $("#sendmsg").text(data.desc);
+                }
+            });
+        </script>
+
+
+    </body>
+</html>

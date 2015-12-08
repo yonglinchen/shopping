@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/hxyf/!svn/ver/20210/qstbp/components/webapi/pay/mobilepay/wxpay/lib
+END
+WxPay.Config.php
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/hxyf/!svn/ver/20210/qstbp/components/webapi/pay/mobilepay/wxpay/lib/WxPay.Config.php
+END
+WxPay.Notify.php
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/hxyf/!svn/ver/20210/qstbp/components/webapi/pay/mobilepay/wxpay/lib/WxPay.Notify.php
+END
+WxPay.Api.php
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/hxyf/!svn/ver/20210/qstbp/components/webapi/pay/mobilepay/wxpay/lib/WxPay.Api.php
+END
+WxPay.Data.php
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/hxyf/!svn/ver/20210/qstbp/components/webapi/pay/mobilepay/wxpay/lib/WxPay.Data.php
+END
+WxPay.Exception.php
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/hxyf/!svn/ver/20210/qstbp/components/webapi/pay/mobilepay/wxpay/lib/WxPay.Exception.php
+END

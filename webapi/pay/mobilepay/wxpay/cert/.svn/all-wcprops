@@ -1,0 +1,17 @@
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/hxyf/!svn/ver/20210/qstbp/components/webapi/pay/mobilepay/wxpay/cert
+END
+apiclient_key.pem
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/hxyf/!svn/ver/20210/qstbp/components/webapi/pay/mobilepay/wxpay/cert/apiclient_key.pem
+END
+apiclient_cert.pem
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/hxyf/!svn/ver/20210/qstbp/components/webapi/pay/mobilepay/wxpay/cert/apiclient_cert.pem
+END

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">    
+        <title>多文件上传-测试程序</title>
+        <link rel="stylesheet" href="./css/upload-1.0.css" type="text/css" />
+    </head>
+    <body>
+        <h1>多文件上传实例</h1>
+        <form action="../../index.php" enctype="multipart/form-data" method="post" >
+            <input type="hidden" name="service" value='{"inter_num":"0030","servicecode":"9003"}'/>
+            <input type="file" name="uploadfile[]"/>
+            <input type="file" name="uploadfile[]"/>
+            <input type="submit" value="提交" >
+        </form>
+        <div class="upload-display"></div>
+        
+        <div class="info-tip-dialog">
+            <div class="info-tip-contentDiv">
+                <div class="info-tip-preloader loading"></div>
+                <div class="info-tip-content">正在处理...</div>
+            </div>
+        </div>
+    </body>
+</html>
+
+

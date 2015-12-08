@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/hxyf/!svn/ver/19816/qstbp/components/webapi/fileupload/code/Upload/Driver
+END
+Qiniu.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svn/hxyf/!svn/ver/19816/qstbp/components/webapi/fileupload/code/Upload/Driver/Qiniu.class.php
+END
+Bcs.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/hxyf/!svn/ver/19816/qstbp/components/webapi/fileupload/code/Upload/Driver/Bcs.class.php
+END
+Sae.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/hxyf/!svn/ver/19816/qstbp/components/webapi/fileupload/code/Upload/Driver/Sae.class.php
+END
+Ftp.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/hxyf/!svn/ver/19816/qstbp/components/webapi/fileupload/code/Upload/Driver/Ftp.class.php
+END
+Local.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svn/hxyf/!svn/ver/19816/qstbp/components/webapi/fileupload/code/Upload/Driver/Local.class.php
+END
+Upyun.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svn/hxyf/!svn/ver/19816/qstbp/components/webapi/fileupload/code/Upload/Driver/Upyun.class.php
+END

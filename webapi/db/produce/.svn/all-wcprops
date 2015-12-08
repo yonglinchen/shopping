@@ -1,0 +1,83 @@
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/hxyf/!svn/ver/20110/qstbp/components/webapi/db/produce
+END
+p_modifypwd.sql
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/hxyf/!svn/ver/20110/qstbp/components/webapi/db/produce/p_modifypwd.sql
+END
+p_check_code.sql
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/hxyf/!svn/ver/19990/qstbp/components/webapi/db/produce/p_check_code.sql
+END
+p_general_code.sql
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/hxyf/!svn/ver/19990/qstbp/components/webapi/db/produce/p_general_code.sql
+END
+p_is_bind.sql
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/hxyf/!svn/ver/19990/qstbp/components/webapi/db/produce/p_is_bind.sql
+END
+p_update_order_ios.sql
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/hxyf/!svn/ver/19997/qstbp/components/webapi/db/produce/p_update_order_ios.sql
+END
+p_account_bind.sql
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/hxyf/!svn/ver/19990/qstbp/components/webapi/db/produce/p_account_bind.sql
+END
+p_login.sql
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/hxyf/!svn/ver/20110/qstbp/components/webapi/db/produce/p_login.sql
+END
+p_other_login.sql
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/hxyf/!svn/ver/19990/qstbp/components/webapi/db/produce/p_other_login.sql
+END
+p_general_code_getpd.sql
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/hxyf/!svn/ver/19991/qstbp/components/webapi/db/produce/p_general_code_getpd.sql
+END
+p_get_order.sql
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/hxyf/!svn/ver/19997/qstbp/components/webapi/db/produce/p_get_order.sql
+END
+p_bind.sql
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/hxyf/!svn/ver/19990/qstbp/components/webapi/db/produce/p_bind.sql
+END
+p_regist.sql
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/hxyf/!svn/ver/20110/qstbp/components/webapi/db/produce/p_regist.sql
+END
+p_set_newpwd.sql
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/hxyf/!svn/ver/20110/qstbp/components/webapi/db/produce/p_set_newpwd.sql
+END

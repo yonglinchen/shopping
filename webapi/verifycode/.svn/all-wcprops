@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/hxyf/!svn/ver/20092/qstbp/components/webapi/verifycode
+END
+getCode.php
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/hxyf/!svn/ver/19881/qstbp/components/webapi/verifycode/getCode.php
+END
+verifyCode.php
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/hxyf/!svn/ver/20092/qstbp/components/webapi/verifycode/verifyCode.php
+END
+Verify.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/hxyf/!svn/ver/19667/qstbp/components/webapi/verifycode/Verify.class.php
+END

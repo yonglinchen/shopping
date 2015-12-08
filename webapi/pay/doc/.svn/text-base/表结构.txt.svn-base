@@ -1,0 +1,115 @@
+﻿表结构定义如下
+t_user_order  用户订单表
+	ID				INT PK AUTOINC 记录流水号
+	ORDER_NO		STRING(20), UK 订单序列号
+	USERID			STRING(50),    用户编号
+//APP_ID			STRING(50),		应用ID
+//CHANNEL_ID		STRING(50),		应用渠道ID，和APPID唯一标识一个应用
+	TERMINAL_ID		STRING(50),	   终端序列号
+	AMOUNT			INT,		   总金额（单位RMB 分）
+	STATUS			INT,		   订单状态（0 已生成等待审核；1审核通过等待支付；2支付完成等待审核；3支付完成确认；4订单手动取消；5 超时未支付，订单取消）
+	CREATE_TIME		TIMESTAMP	   订单创建时间
+	DO_TIME			TIMESTAMP	   订单状态最后一次变化时间
+	ORDER_MEMO		STRING(100)	   订单备注（用户填写，接口传入）	
+t_user_order_detail
+	ID				INT PK AUTOINC	记录流水号
+	ORDER_NO		STRING(20)		订单序列号
+	GOOD_ID		STRING(20)		商品ID
+	NUMBER		INT					购买数量	
+	#GOODS_NAME		STRING(50)	商品名称
+	#GOODS_INFO		STRING(50)	商品附加属性信息(尺码，颜色，等)
+	#GOODS_PICURL			STRING(200)		商品图片
+	...								
+	#GOODS_URL		STRING(50)		商品所在链接（或者ID）
+
+t_user_order_log
+	ID					INT PK AUTOINC	记录流水号
+	ORDER_NO		STRING(20)		订单序列号
+	OLD_STATUS	INT,			上一次状态
+	NEW_STATUS	INT,			本次操作状态
+	OPERATOR		STRING(20)		操作员（用户ID或操作员ID）
+	RSPDATA			STRING(200)		签名数据备份记录
+	REG_TIME		TIMESTAMP	    记录时间
+t_user_pay
+	ID				INT PK AUTOINC	记录流水号
+	ORDER_NO		STRING(20)		订单序列号
+	PAY_CHANNEL	STRING	(20)		支付渠道信息 （wx，alipay，等）
+	PAY_FEE			INT				支付金额
+	REG_TIME		TIMESTAMP	    记录时间
+	CLIENT_IP       STRING(16)         客户端ip
+	ALIPAY_NO       STRING(64)         支付宝流水号、微信流水号
+	
+t_pay_info	支付渠道与APP绑定关系
+	ID				INT PK AUTOINC	记录流水号
+#	APP_ID			STRING(50),		应用ID
+#CHANNEL_ID		STRING(50),		应用渠道ID，和APPID唯一标识一个应用
+	PAY_CHANNEL		STRING(20)		支付渠道信息 （wx，alipay，等）
+	PRIVATE_KEY		STRING(200),	支付证书私钥
+	PUBLIC_KEY		STRING(200),	支付证书公钥
+	PAY_APPID		STRING(50),		支付渠道APPID
+	PAY_SELLER		STRING(50),		支付渠道商户
+	PAY_PARTNER_KEY	STRING(200),	商户密钥	
+	PAY_PARTNER		STRING(50),		商户ID
+	PAY_NOTIFYURL	STRING(50),		支付服务器结果通知URL
+	
+t_pay_type
+	
+存储过程	
+生成订单，返回订单号及订单金额
+P_ORDER_GENERATE
+	IN 	USER_ID			STRING(50),    用户编号
+	IN 	TERMINAL_ID		STRING(50),	   终端序列号
+	IN 	AMOUNT			INT,		   总金额（单位RMB 分）
+	IN 	ORDER_MEMO		STRING(100)	   订单备注（用户填写，接口传入）
+	IN 	GOODS		STRING(300)	   商品信息，为JSON结构
+	IN	APP_ID			STRING(50),		应用ID
+	IN	CHANNEL_ID		STRING(50),		应用渠道ID，和APPID唯一标识一个应用
+	OUT	RESULT			INT,		   错误码，为0时表示成功，其他值表示错误。
+	OUT ORDER_ID		STRING(20)	   订单号
+	OUT PAY_CHANNEL		STRING(20)	   可用的支付渠道标识，以+分割
+
+P_ORDER_ADD_GOODS
+执行动作
+1 生成订单号
+开始会话
+2 解析订单商品信息,成功则继续,失败返回错误.
+3 商品列表信息入库记录
+4 计算价格
+5 商品订单信息入库记录
+6 获取可用的支付方式列表
+7 返回
+设置支付信息
+P_ORDER_PAY_INFO
+	IN  ORDER_NO		STRING(20)	   订单号
+	IN  APP_ID			STRING(50),		应用ID
+	IN	CHANNEL_ID		STRING(50),		应用渠道ID，和APPID唯一标识一个应用	
+	IN  PAY_CHANNEL		STRING(20)	   渠道信息标识符wx，alipay
+	OUT PRIVATE_KEY		STRING(200),	支付证书私钥文件名
+	OUT PRIVATE_KEY_PWD STRING(50),		支付证书私钥保护密钥
+	OUT PUBLIC_KEY		STRING(200),	支付证书公钥文件名
+	OUT SE				STRING(500),	支付宝支付方式返回的参数
+	
+设置支付结果
+P_ORDER_PAY_RESULT
+	IN  ORDER_NO		STRING(20)	   订单号
+	IN  APP_ID			STRING(50),		应用ID
+	IN	CHANNEL_ID		STRING(50),		应用渠道ID，和APPID唯一标识一个应用	
+	IN	PAY_RESULT		INT				支付结果
+	IN  PAY_DESC		STRING(200),	支付结果描述信息，可能包含支付凭证
+	OUT	RESULT			INT,		   错误码，为0时表示成功，其他值表示错误。
+计算价格
+P_ORDER_FEE_CALC
+	IN  ORDER_NO		STRING(20)	   订单号
+	IN  APP_ID			STRING(50),		应用ID
+	IN	CHANNEL_ID		STRING(50),		应用渠道ID，和APPID唯一标识一个应用	
+	IN  PAY_CHANNEL		STRING(20)	   渠道信息标识符wx，alipay
+	OUT	RESULT			INT,		   错误码，为0时表示成功，其他值表示错误。
+	OUT FEE				INT,			订单实际支付金额，单位分
+	
+PHP页面动作
+	order_get_paytype_list.php		负责返回该APP可用的支付列表
+	order_generate.php			负责生成订单，并将订单信息，订单商品列表信息入库记录。返回生成的订单号，及可用的支付渠道信息
+	order_pay.php
+	负责根据客户端上传的订单信息，生成具体的签名描述信息，并返回给客户端，由客户端自行拼串，传给对应的支付渠道(支付宝无需服务器侧下单；微信需要服务器侧调用统一下单，然后再生成签名信息返回给APP)
+	order_result_notify_(wx，alipay).php 	负责响应支付服务器的支付结果，并将结果入库，被动调用。
+	order_query.php				负责查询订单状态，查询支付是否成功，服务器侧查询支付成功后再返回给客户端确认支付成功。（APP支付完成后,客户端需发起查询动作，每隔几秒发起一次查询请求,有订单列表的情况下,可以跳出;没有订单列表时不可跳出）

@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/hxyf/!svn/ver/20210/qstbp/components/webapi/pay/mobilepay/alipaysdk/lib
+END
+alipay_core.function.php
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/svn/hxyf/!svn/ver/20210/qstbp/components/webapi/pay/mobilepay/alipaysdk/lib/alipay_core.function.php
+END
+alipay_notify.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/svn/hxyf/!svn/ver/20210/qstbp/components/webapi/pay/mobilepay/alipaysdk/lib/alipay_notify.class.php
+END
+alipay_submit.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/svn/hxyf/!svn/ver/20210/qstbp/components/webapi/pay/mobilepay/alipaysdk/lib/alipay_submit.class.php
+END
+alipay_rsa.function.php
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/svn/hxyf/!svn/ver/20210/qstbp/components/webapi/pay/mobilepay/alipaysdk/lib/alipay_rsa.function.php
+END

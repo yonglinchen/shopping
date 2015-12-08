@@ -1,0 +1,95 @@
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/hxyf/!svn/ver/20212/qstbp/components/webapi/pay/mobilepay/wxpay/interface
+END
+WxPay.MicroPay.php
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/svn/hxyf/!svn/ver/20212/qstbp/components/webapi/pay/mobilepay/wxpay/interface/WxPay.MicroPay.php
+END
+orderquery.php
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/hxyf/!svn/ver/20210/qstbp/components/webapi/pay/mobilepay/wxpay/interface/orderquery.php
+END
+jsapi.php
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/hxyf/!svn/ver/20210/qstbp/components/webapi/pay/mobilepay/wxpay/interface/jsapi.php
+END
+download.php
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/hxyf/!svn/ver/20210/qstbp/components/webapi/pay/mobilepay/wxpay/interface/download.php
+END
+WxPay.NativePay.php
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/svn/hxyf/!svn/ver/20212/qstbp/components/webapi/pay/mobilepay/wxpay/interface/WxPay.NativePay.php
+END
+notify.php
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/hxyf/!svn/ver/20210/qstbp/components/webapi/pay/mobilepay/wxpay/interface/notify.php
+END
+appnotify.php
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/hxyf/!svn/ver/20210/qstbp/components/webapi/pay/mobilepay/wxpay/interface/appnotify.php
+END
+refundquery.php
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svn/hxyf/!svn/ver/20212/qstbp/components/webapi/pay/mobilepay/wxpay/interface/refundquery.php
+END
+qrcode.php
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/hxyf/!svn/ver/20212/qstbp/components/webapi/pay/mobilepay/wxpay/interface/qrcode.php
+END
+native_notify.php
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/svn/hxyf/!svn/ver/20210/qstbp/components/webapi/pay/mobilepay/wxpay/interface/native_notify.php
+END
+log.php
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/hxyf/!svn/ver/20210/qstbp/components/webapi/pay/mobilepay/wxpay/interface/log.php
+END
+refund.php
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/hxyf/!svn/ver/20212/qstbp/components/webapi/pay/mobilepay/wxpay/interface/refund.php
+END
+micropay.php
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/hxyf/!svn/ver/20210/qstbp/components/webapi/pay/mobilepay/wxpay/interface/micropay.php
+END
+native.php
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/hxyf/!svn/ver/20210/qstbp/components/webapi/pay/mobilepay/wxpay/interface/native.php
+END
+WxPay.JsApiPay.php
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/svn/hxyf/!svn/ver/20212/qstbp/components/webapi/pay/mobilepay/wxpay/interface/WxPay.JsApiPay.php
+END

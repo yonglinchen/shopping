@@ -1,0 +1,119 @@
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/hxyf/!svn/ver/20212/qstbp/components/webapi/pay/mobilepay/wxpay/interface/phpqrcode
+END
+qrconst.php
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/svn/hxyf/!svn/ver/20212/qstbp/components/webapi/pay/mobilepay/wxpay/interface/phpqrcode/qrconst.php
+END
+LICENSE
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/svn/hxyf/!svn/ver/20212/qstbp/components/webapi/pay/mobilepay/wxpay/interface/phpqrcode/LICENSE
+END
+qrbitstream.php
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/svn/hxyf/!svn/ver/20212/qstbp/components/webapi/pay/mobilepay/wxpay/interface/phpqrcode/qrbitstream.php
+END
+qrspec.php
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svn/hxyf/!svn/ver/20210/qstbp/components/webapi/pay/mobilepay/wxpay/interface/phpqrcode/qrspec.php
+END
+qrmask.php
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svn/hxyf/!svn/ver/20210/qstbp/components/webapi/pay/mobilepay/wxpay/interface/phpqrcode/qrmask.php
+END
+qrsplit.php
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/svn/hxyf/!svn/ver/20210/qstbp/components/webapi/pay/mobilepay/wxpay/interface/phpqrcode/qrsplit.php
+END
+VERSION
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/svn/hxyf/!svn/ver/20212/qstbp/components/webapi/pay/mobilepay/wxpay/interface/phpqrcode/VERSION
+END
+qrencode.php
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/svn/hxyf/!svn/ver/20212/qstbp/components/webapi/pay/mobilepay/wxpay/interface/phpqrcode/qrencode.php
+END
+CHANGELOG
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/svn/hxyf/!svn/ver/20212/qstbp/components/webapi/pay/mobilepay/wxpay/interface/phpqrcode/CHANGELOG
+END
+qrinput.php
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/svn/hxyf/!svn/ver/20210/qstbp/components/webapi/pay/mobilepay/wxpay/interface/phpqrcode/qrinput.php
+END
+qrtools.php
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/svn/hxyf/!svn/ver/20212/qstbp/components/webapi/pay/mobilepay/wxpay/interface/phpqrcode/qrtools.php
+END
+index.php
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/svn/hxyf/!svn/ver/20212/qstbp/components/webapi/pay/mobilepay/wxpay/interface/phpqrcode/index.php
+END
+README
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svn/hxyf/!svn/ver/20212/qstbp/components/webapi/pay/mobilepay/wxpay/interface/phpqrcode/README
+END
+qrconfig.php
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/svn/hxyf/!svn/ver/20212/qstbp/components/webapi/pay/mobilepay/wxpay/interface/phpqrcode/qrconfig.php
+END
+qrlib.php
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/svn/hxyf/!svn/ver/20210/qstbp/components/webapi/pay/mobilepay/wxpay/interface/phpqrcode/qrlib.php
+END
+INSTALL
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/svn/hxyf/!svn/ver/20212/qstbp/components/webapi/pay/mobilepay/wxpay/interface/phpqrcode/INSTALL
+END
+qrrscode.php
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/svn/hxyf/!svn/ver/20210/qstbp/components/webapi/pay/mobilepay/wxpay/interface/phpqrcode/qrrscode.php
+END
+qrimage.php
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/svn/hxyf/!svn/ver/20210/qstbp/components/webapi/pay/mobilepay/wxpay/interface/phpqrcode/qrimage.php
+END
+phpqrcode.php
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/svn/hxyf/!svn/ver/20212/qstbp/components/webapi/pay/mobilepay/wxpay/interface/phpqrcode/phpqrcode.php
+END
