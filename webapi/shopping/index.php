@@ -112,6 +112,29 @@ function dealCartFlow($body){
             }
             /** 用户购物车商品删除  -  业务处理 end */
             break;
+        case "1004"://用户购物车商品数量更改
+            /** 用户购物车商品删除  -  业务处理 start */
+            $user_id = "1";
+            
+            $sql_goodInCart = "select count(*) as total from cart where user_id = " . $user_id . " and goods_id in(" . $body["goods_id"] . ")";
+            $goodInCart  = $mysqliObj->real_get($sql_goodInCart); 
+            if($goodInCart["total"] > 0){
+                $get_db_sql = "update cart set goods_number = " . $body["goods_number"] . " where user_id = " . $user_id . " and goods_id in(" . $body["goods_id"] . ")";
+           
+                $result = $mysqliObj->execute($get_db_sql);
+
+                if(!$result){
+                    $result_data["status"] = -1;
+                    $result_data["desc"] = "用户购物车商品数量更改失败";
+                } else {
+                    $result_data["desc"] = "用户购物车商品数量更改成功";
+                }
+            } else {
+                $result_data["status"] = -1;
+                $result_data["desc"] = "商品不存在";
+            }
+            /** 用户购物车商品删除  -  业务处理 end */
+            break;
     }
     
     return $result_data;
