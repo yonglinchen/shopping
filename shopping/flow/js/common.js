@@ -6,7 +6,7 @@ var rooturl =  getRootPath();
 add by dongwg
 */
 function getRootPath(){
-    var appName = "component/shopping/shopping";
+    var appName = "component/shopping";
     var pathName = window.document.location.pathname;
     var pos = pathName.indexOf('/' + appName);
     var localhostPaht = '';

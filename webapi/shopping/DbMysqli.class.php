@@ -31,6 +31,11 @@ class DbMysqli {
         $this->free();  
         $this->close();  
     }  
+    
+    public function dbClose(){
+        $this->free();
+        $this->close();
+    }
   
     //释放结果集所占资源  
     protected function free() {  
@@ -74,19 +79,33 @@ class DbMysqli {
     }  
   
     //执行sql语句查询  
-    public function query($sql, $limit = null) {  
+    public function query($sql, $limit = null) { 
         $sql    = $this->get_query_sql($sql, $limit);  
         $this->sql[]    = $sql;  
         $this->rs    = $this->mysqli->query($sql);  
-        if (!$this->rs) {  
-            echo "<p>error: ".$this->mysqli->error."</p>";  
-            echo "<p>sql: ".$sql."</p>";  
-            die();  
+        
+        if (!$this->rs) { 
+//            添加错误日志
+//            echo "<p>error: ".$this->mysqli->error."</p>";  
+//            echo "<p>sql: ".$sql."</p>";  
+//            die(); 
+            return false;
         } else {  
             $this->query_num++;  
             return $this->rs;  
         }  
     }  
+    
+    
+    public function execute($sql, $limit = null){
+        $result = true;
+        if(!$this->mysqli->query($sql)){
+            $result = false;
+        }
+
+        $this->free();  
+        return $result;
+    }
   
     //返回单条记录的单个字段值  
     public function get_one($sql) {  
