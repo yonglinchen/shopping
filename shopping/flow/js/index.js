@@ -18,6 +18,7 @@ $(function(){
             $(".shop_price").text(data.data[0].shop_price);
             $(".market_price").text(data.data[0].market_price);
             $(".goodnum").val(data.data[0].goods_number);
+            $(".goods_id").val(data.data[0].goods_id);
             
             $(".default_img").attr("src","images/"+data.data[0].images[0].good_img);
                 $(".default_img").attr("jqimg","images/"+data.data[0].images[0].good_img);
@@ -33,4 +34,32 @@ $(function(){
         }
     });  
 });
+
+/**
+ * 商品添加到购物车
+ * @returns {undefined}
+ */
+function addToCart(){
+    var service = {}; 
+    var goods_id = $(".goods_id").val();
+    var goods_number = $(".goodnum").val(); 
+    service.inter_num = "0050";   
+    service.servicecode = "1001";
+    service.goods_id = goods_id;
+    service.user_id = "1";
+    service.goods_number = goods_number;
+    service.rec_type = "0";
+    service = JSON.stringify(service);
+    
+    var send_url = rooturl + "/../webapi/index.php";
+    apiSendAjax(send_url, service, true, function (status, data) {
+        if(status == 0){
+            location.href="addToCart.html";
+            //console.log(data);
+        } else {
+            location.href="errorToCart.html";
+            //console.log(data);
+        }
+    });  
+}
 
