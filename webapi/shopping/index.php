@@ -52,8 +52,19 @@ function dealCartFlow($body){
                 $_info["market_price"] = $shopData["market_price"];
                 $_info["goods_price"] = $shopData["shop_price"];
                 $_info["is_real"] = $shopData["is_real"];
-                $get_insert_db_sql = $mysqliObj->get_insert_db_sql("cart",$_info);
-                $result = $mysqliObj->execute($get_insert_db_sql);
+                
+                $where = "goods_id=" . $body["goods_id"] . " and user_id=" . $body["user_id"];
+                $sql_goodInCart = "select count(*) as total, goods_number from cart where " . $where;
+                $goodInCart  = $mysqliObj->real_get($sql_goodInCart);   
+                if($goodInCart["total"] > 0){
+                    $_info["goods_number"] = $_info["goods_number"] + $goodInCart["goods_number"];
+                    $get_db_sql = $mysqliObj->get_update_db_sql("cart",$_info, $where);
+                } else {
+                    $get_db_sql = $mysqliObj->get_insert_db_sql("cart",$_info);
+                }
+                
+                
+                $result = $mysqliObj->execute($get_db_sql);
 
                 if(!$result){
                     $result_data["status"] = -1;
@@ -67,6 +78,16 @@ function dealCartFlow($body){
                  $result_data["desc"] = "商品加入购物车失败";
              }
             /** 加入购物车  -  业务处理 end */
+            break;
+        case "1002"://用户购物车列表展示 
+            /** 用户购物车列表展示  -  业务处理 start */
+            $user_id = "1";
+            $sql_userCartGoodList = "select ct.goods_id, ct.goods_sn, ct.goods_name, ct.goods_number, ct.market_price, ct.goods_price, gd.goods_desc from cart as ct join goods as gd on ct.goods_id = gd.goods_id"
+                    . " where user_id = " . $user_id;
+            print_r($sql_userCartGoodList);exit();
+            $_userCartGoodList = $mysqliObj->get_all($sql_userCartGoodList);
+            $result_data["data"] = $_userCartGoodList;
+            /** 用户购物车列表展示  -  业务处理 end */
             break;
     }
     
