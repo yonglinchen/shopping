@@ -99,8 +99,7 @@ class DbMysqli {
     
     public function execute($sql, $limit = null){
         $result = true;
-
-        if(!$this->query($sql, $limit)){
+        if(!$this->mysqli->query($sql)){
             $result = false;
         }
 

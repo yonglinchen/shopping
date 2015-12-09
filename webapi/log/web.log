@@ -301,3 +301,35 @@
 [2015-12-09 14:54:54][127.0.0.1:56779][info] <--------- start --------->
 [2015-12-09 14:54:54][127.0.0.1:56779][info] REQ:{"inter_num":"0050","servicecode":"1001","goods_id":"1","user_id":"1","goods_number":"1","rec_type":"0"}
 [2015-12-09 14:54:54][127.0.0.1:56779][info] ---------> send to(OK): {"status":"0","desc":"","data":[]}
+[2015-12-09 15:07:43][127.0.0.1:56965][info] <--------- start --------->
+[2015-12-09 15:07:43][127.0.0.1:56965][info] REQ:{"inter_num":"0050","servicecode":"1000"}
+[2015-12-09 15:07:43][127.0.0.1:56965][info] ---------> send to(OK): {"status":"0","desc":"","data":[{"goods_id":"1","market_price":"1665.60","shop_price":"1388.00","goods_name":"福佳（Hoegaarden） 白啤酒330ml 瓶装","goods_number":"10","goods_weight":"0.110","goods_desc":"<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 很多朋友都已经抢先体验了3G网络的可视通话、高速上网等功能。LG KD876手机<span style="font-size: x-large;"><span style="color: rgb(255, 0, 0);"><strong>支持TD-SCDMA/GSM双模单待</strong></span></span>，便于测试初期GSM网络和TD网络之间的切换和共享。</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; LG KD876手机整体采用银色塑料材质，<strong><span style="font-size: x-large;"><span style="color: rgb(255, 0, 0);">特殊的旋转屏设计是本机的亮点</span></span></strong>，而机身背部的300万像素摄像头也是首发的六款TD-SCDMA手机中配置最高的。LG KD876手机屏幕下方设置有外键盘，该键盘由左/右软键、通话/挂机键、返回键、五维摇杆组成，摇杆灵敏度很高，定位准确。KD876的内键盘由标准12个电话键和三个功能键、一个内置摄像头组成。三个功能键分别为视频通话、MP3、和菜单键，所有按键的手感都比较一般，键程适中，当由于按键排列过于紧密，快速发短信时很容易误按，用户在使用时一定要多加注意。LG KD876手机机身周边的接口设计非常简洁，手机的厚度主要来自屏幕旋转轴的长度，如果舍弃旋屏设计的话，估计<span style="font-size: x-large;"><strong><span style="color: rgb(255, 0, 0);">厚度可以做到10mm以下</span></strong></span>。</p>","images":[{"good_img":"2-2.jpg","master":"1"},{"good_img":"2-4.jpg","master":"0"},{"good_img":"1-1.jpg","master":"0"},{"good_img":"1-2.png","master":"0"}]}]}
+[2015-12-09 15:08:29][127.0.0.1:56984][info] <--------- start --------->
+[2015-12-09 15:08:29][127.0.0.1:56984][info] REQ:{"inter_num":"0050","servicecode":"1000"}
+[2015-12-09 15:08:29][127.0.0.1:56984][info] ---------> send to(OK): {"status":"0","desc":"","data":[{"goods_id":"1","market_price":"1665.60","shop_price":"1388.00","goods_name":"福佳（Hoegaarden） 白啤酒330ml 瓶装","goods_number":"10","goods_weight":"0.110","goods_desc":"<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 很多朋友都已经抢先体验了3G网络的可视通话、高速上网等功能。LG KD876手机<span style="font-size: x-large;"><span style="color: rgb(255, 0, 0);"><strong>支持TD-SCDMA/GSM双模单待</strong></span></span>，便于测试初期GSM网络和TD网络之间的切换和共享。</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; LG KD876手机整体采用银色塑料材质，<strong><span style="font-size: x-large;"><span style="color: rgb(255, 0, 0);">特殊的旋转屏设计是本机的亮点</span></span></strong>，而机身背部的300万像素摄像头也是首发的六款TD-SCDMA手机中配置最高的。LG KD876手机屏幕下方设置有外键盘，该键盘由左/右软键、通话/挂机键、返回键、五维摇杆组成，摇杆灵敏度很高，定位准确。KD876的内键盘由标准12个电话键和三个功能键、一个内置摄像头组成。三个功能键分别为视频通话、MP3、和菜单键，所有按键的手感都比较一般，键程适中，当由于按键排列过于紧密，快速发短信时很容易误按，用户在使用时一定要多加注意。LG KD876手机机身周边的接口设计非常简洁，手机的厚度主要来自屏幕旋转轴的长度，如果舍弃旋屏设计的话，估计<span style="font-size: x-large;"><strong><span style="color: rgb(255, 0, 0);">厚度可以做到10mm以下</span></strong></span>。</p>","images":[{"good_img":"2-2.jpg","master":"1"},{"good_img":"2-4.jpg","master":"0"},{"good_img":"1-1.jpg","master":"0"},{"good_img":"1-2.png","master":"0"}]}]}
+[2015-12-09 15:13:46][127.0.0.1:57032][info] <--------- start --------->
+[2015-12-09 15:13:46][127.0.0.1:57032][info] REQ:{"inter_num":"0050","servicecode":"1001","goods_id":"1","user_id":"1","goods_number":"1","rec_type":"0"}
+[2015-12-09 15:13:46][127.0.0.1:57032][info] ---------> send to(OK): {"status":"0","desc":"","data":[]}
+[2015-12-09 15:17:33][127.0.0.1:57090][info] <--------- start --------->
+[2015-12-09 15:17:33][127.0.0.1:57090][info] REQ:{"inter_num":"0050","servicecode":"1001","goods_id":"1","user_id":"1","goods_number":"1","rec_type":"0"}
+[2015-12-09 15:18:55][127.0.0.1:57099][info] <--------- start --------->
+[2015-12-09 15:18:55][127.0.0.1:57099][info] REQ:{"inter_num":"0050","servicecode":"1001","goods_id":"1","user_id":"1","goods_number":"1","rec_type":"0"}
+[2015-12-09 15:19:24][127.0.0.1:57106][info] <--------- start --------->
+[2015-12-09 15:19:24][127.0.0.1:57106][info] REQ:{"inter_num":"0050","servicecode":"1001","goods_id":"1","user_id":"1","goods_number":"1","rec_type":"0"}
+[2015-12-09 15:19:55][127.0.0.1:57112][info] <--------- start --------->
+[2015-12-09 15:19:55][127.0.0.1:57112][info] REQ:{"inter_num":"0050","servicecode":"1001","goods_id":"1","user_id":"1","goods_number":"1","rec_type":"0"}
+[2015-12-09 15:20:07][127.0.0.1:57115][info] <--------- start --------->
+[2015-12-09 15:20:07][127.0.0.1:57115][info] REQ:{"inter_num":"0050","servicecode":"1001","goods_id":"1","user_id":"1","goods_number":"1","rec_type":"0"}
+[2015-12-09 15:26:42][127.0.0.1:57606][info] <--------- start --------->
+[2015-12-09 15:26:42][127.0.0.1:57606][info] REQ:{"inter_num":"0050","servicecode":"1000"}
+[2015-12-09 15:26:42][127.0.0.1:57606][info] ---------> send to(OK): {"status":"0","desc":"","data":[{"goods_id":"1","market_price":"1665.60","shop_price":"1388.00","goods_name":"福佳（Hoegaarden） 白啤酒330ml 瓶装","goods_number":"10","goods_weight":"0.110","goods_desc":"<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 很多朋友都已经抢先体验了3G网络的可视通话、高速上网等功能。LG KD876手机<span style="font-size: x-large;"><span style="color: rgb(255, 0, 0);"><strong>支持TD-SCDMA/GSM双模单待</strong></span></span>，便于测试初期GSM网络和TD网络之间的切换和共享。</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; LG KD876手机整体采用银色塑料材质，<strong><span style="font-size: x-large;"><span style="color: rgb(255, 0, 0);">特殊的旋转屏设计是本机的亮点</span></span></strong>，而机身背部的300万像素摄像头也是首发的六款TD-SCDMA手机中配置最高的。LG KD876手机屏幕下方设置有外键盘，该键盘由左/右软键、通话/挂机键、返回键、五维摇杆组成，摇杆灵敏度很高，定位准确。KD876的内键盘由标准12个电话键和三个功能键、一个内置摄像头组成。三个功能键分别为视频通话、MP3、和菜单键，所有按键的手感都比较一般，键程适中，当由于按键排列过于紧密，快速发短信时很容易误按，用户在使用时一定要多加注意。LG KD876手机机身周边的接口设计非常简洁，手机的厚度主要来自屏幕旋转轴的长度，如果舍弃旋屏设计的话，估计<span style="font-size: x-large;"><strong><span style="color: rgb(255, 0, 0);">厚度可以做到10mm以下</span></strong></span>。</p>","images":[{"good_img":"2-2.jpg","master":"1"},{"good_img":"2-4.jpg","master":"0"},{"good_img":"1-1.jpg","master":"0"},{"good_img":"1-2.png","master":"0"}]}]}
+[2015-12-09 15:26:47][127.0.0.1:57607][info] <--------- start --------->
+[2015-12-09 15:26:47][127.0.0.1:57607][info] REQ:{"inter_num":"0050","servicecode":"1001","goods_id":"1","user_id":"1","goods_number":"1","rec_type":"0"}
+[2015-12-09 15:27:11][127.0.0.1:57617][info] <--------- start --------->
+[2015-12-09 15:27:11][127.0.0.1:57617][info] REQ:{"inter_num":"0050","servicecode":"1001","goods_id":"1","user_id":"1","goods_number":"1","rec_type":"0"}
+[2015-12-09 15:27:40][127.0.0.1:57624][info] <--------- start --------->
+[2015-12-09 15:27:40][127.0.0.1:57624][info] REQ:{"inter_num":"0050","servicecode":"1001","goods_id":"1","user_id":"1","goods_number":"1","rec_type":"0"}
+[2015-12-09 15:27:40][127.0.0.1:57624][info] ---------> send to(OK): {"status":"0","desc":"商品加入购物车成功","data":[]}

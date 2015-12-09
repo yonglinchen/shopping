@@ -45,7 +45,7 @@ function dealCartFlow($body){
             $sql_retrieveGood = "select goods_sn, goods_name, market_price, shop_price, is_real from goods "
                     . "where goods_id=" . $body["goods_id"];
             $shopData  = $mysqliObj->real_get($sql_retrieveGood);   
-            return $result_data;
+
             if($shopData){ 
                 $_info["goods_sn"] = $shopData["goods_sn"];
                 $_info["goods_name"] = $shopData["goods_name"];
@@ -53,8 +53,6 @@ function dealCartFlow($body){
                 $_info["goods_price"] = $shopData["shop_price"];
                 $_info["is_real"] = $shopData["is_real"];
                 $get_insert_db_sql = $mysqliObj->get_insert_db_sql("cart",$_info);
-                $get_insert_db_sql= "INSERT INTO cart (goods_id,user_id,goods_number,rec_type,goods_sn,goods_name,market_price,goods_price,is_real) VALUES ('1','1','1','0','ECS000000','福佳（Hoegaarden） 白啤酒330ml 瓶装','1665.60','1388.00','1')";
-
                 $result = $mysqliObj->execute($get_insert_db_sql);
 
                 if(!$result){
@@ -68,8 +66,6 @@ function dealCartFlow($body){
                  $result_data["status"] = -1;
                  $result_data["desc"] = "商品加入购物车失败";
              }
-             
-             $mysqliObj->close();
             /** 加入购物车  -  业务处理 end */
             break;
     }
