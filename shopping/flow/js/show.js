@@ -19,7 +19,7 @@ $(function () {
         _front: "#spec-right",
         _back: "#spec-left"
     });
-    $("#spec-list img").bind("mouseover", function () {
+    $("#spec-list img").live("mouseover", function () {
         var src = $(this).attr("src");
         $("#spec-n1 img").eq(0).attr({
             src: src.replace("\/n5\/", "\/n1\/"),
@@ -29,7 +29,7 @@ $(function () {
             "border": "2px solid #ff6600",
             "padding": "1px"
         });
-    }).bind("mouseout", function () {
+    }).live("mouseout", function () {
         $(this).css({
             "border": "1px solid #ccc",
             "padding": "2px"

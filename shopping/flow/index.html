@@ -6,12 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" /> 
         <link rel="stylesheet" href="css/top.css" >
         <link rel="stylesheet" href="css/detail.css">
-        <script type="text/javascript" src="js/jquery.min.js"></script>
-        <script type="text/javascript" src="js/base.js"></script> 
-        <script type="text/javascript" src="js/jqueryzoom-jcarousel.js"></script> 
-        <script type="text/javascript" src="js/common.js" ></script> 
-        <script type="text/javascript" src="js/sendAjax.js" ></script> 
-        <script type="text/javascript" src="js/show.js" ></script> 
+        
     </head> 
     <body> 
         <!--  start  ------------------------------------------------------> 
@@ -21,7 +16,7 @@
                 <!-- jqzoom--> 
                 <div id="zoom"> 
                     <div class="jqzoom" id="spec-n1">
-                        <img height="350" src="images/2-2.jpg" jqimg="images/2-2.jpg" width="350" alt="" /> 
+                        <img height="350" src="" jqimg="" width="350" alt="" class="default_img" /> 
                     </div> 
                     <div id="spec-n5"> 
                         <div class="control" id="spec-left"> 
@@ -29,24 +24,9 @@
                         </div> 
                         <div id="spec-list"> 
                             <ul class="list-h" style="width: 310px; overflow: hidden;">  
-                                <li>
+<!--                                <li>
                                     <img src="images/2-1.jpg" style="border: 1px solid rgb(204, 204, 204); padding: 2px;" /> 
-                                </li> 
-                                <li>
-                                    <img src="images/2-2.jpg" style="border: 1px solid rgb(204, 204, 204); padding: 2px;" /> 
-                                </li> 
-                                <li>
-                                    <img src="images/2-3.jpg" style="border: 1px solid rgb(204, 204, 204); padding: 2px;" /> 
-                                </li> 
-                                <li>
-                                    <img src="images/2-4.jpg" style="border: 1px solid rgb(204, 204, 204); padding: 2px;" /> 
-                                </li> 
-                                <li>
-                                    <img src="images/1-1.jpg" style="border: 1px solid rgb(204, 204, 204); padding: 2px;" /> 
-                                </li> 
-                                <li>
-                                    <img src="images/1-2.png" style="border: 1px solid rgb(204, 204, 204); padding: 2px;" /> 
-                                </li> 
+                                </li> -->
                             </ul> 
                         </div> 
                         <div class="control" id="spec-right"> 
@@ -57,18 +37,29 @@
                 <!-- wwww over--> 
                 <!-- 商品参数--> 
                 <div class="dl_goods_info"> 
-                    <h2 class="dginfo_h2">福佳（Hoegaarden） 白啤酒330ml 瓶装</h2> 
-                    <p>价格：<span class="dginfo_price">￥<em class="price" id="resetprice"> 13.90</em></span></p> 
+                    <h2 class="dginfo_h2">123</h2> 
+                    <p>价格：<span class="dginfo_price">￥<em class="price shop_price" id="resetprice"></em></span></p> 
                     <ul class="dginfo_info"> 
-                        <li>销量：0</li> 
-                        <li class="dginfo_info_last">品牌：福佳<span></span></li> 
+                        <li class="dginfo_info_last">市场价：<span class="market_price"></span></li> 
+                        <li>重量：<span class='dginfo_weight'></span></li> 
                         <li> 
                             <form action="/yershop/index.php?s=/Home/order/add.html" name="orderform" id="orform" method="post" onsubmit="return trySubmit()"> 
                                 <input type="hidden" name="id[]" value="85" /> 
                                 <input type="hidden" name="price[]" id="inputprice" value="13.90" /> 
                                 <input type="hidden" name="sort[]" id="inputsort" value="85" /> 
                                 <input type="hidden" name="parameters[]" id="inputparameters" /> 
-                                <p class=""><span class="quantity">数量：</span><span class="quantity-form"><a href="javascript:void(0)" class="jia" onclick="add()">+</a> <input type="text" class="goodnum" value="1" name="num[]" /><a onclick="reduce()" id="oneA" href="javascript:void(0)" class="jian">-</a></span></p> 
+                                <p class="">
+                                    <span class="quantity">数量：</span>
+                                    <span class="quantity-form">
+<!--                                        <a href="javascript:void(0);" class="decrement" id="decrement">-</a>
+                                        <input type="text" class="itxt" readonly value="3" id="changeNum" />
+                                        <a href="javascript:void(0);" class="increment" id="increment">+</a>-->
+                                        
+                                        <a href="javascript:void(0)" class="jia decrement" id="decrement">-</a> 
+                                        <input type="text" class="goodnum itxt" readonly value="" id="changeNum" />
+                                        <a  id="increment" href="javascript:void(0)" class="jian increment">+</a>
+                                    </span>
+                                </p> 
                             </form>
                         </li> 
                     </ul> 
@@ -82,5 +73,13 @@
             <!-- 商品描述结束details_left_top--> 
  
         </div> 
+        <script type="text/javascript" src="js/jquery.min.js"></script>
+        <script type="text/javascript" src="js/index.js" ></script>
+        <script type="text/javascript" src="js/jqueryzoom-jcarousel.js"></script> 
+        <script src="js/cart.js" type="text/javascript"></script>
+        <script type="text/javascript" src="js/common.js" ></script> 
+        <script type="text/javascript" src="js/sendAjax.js" ></script> 
+        <script type="text/javascript" src="js/show.js" ></script> 
+        <script type="text/javascript" src="js/base.js"></script>
     </body>
 </html>
