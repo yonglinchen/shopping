@@ -16,32 +16,47 @@
         <a href="javascript:;" title="关闭" class="close fr">×</a>
     </div>
     <div class="poptit_01">
-        <div class="mt15">
-            <span>收货人：</span><input type="text" maxlength="5" class=""  />
+        <div class="" style="padding-top: 15px;">
+            <span>收货人：</span>
+            <input type="text" maxlength="5" class="vip_name"  />
+            <em class="vip_name_span" style="display: none;color: red;margin-left: 5px;">请您填写收货人姓名</em>
         </div>
         <div class="mt15">
             <span>所在地区：</span>
-            <select class="">
+            <select class="vip_select1">
                     <option value="">请选择</option>
+                    <option value="北京">北京</option>
             </select>
-            <select class="">
+            <select class="vip_select2">
                     <option value="">请选择</option>
+                    <option value="北京">北京</option>
             </select>
-            <select class="">
+            <select class="vip_select3">
                     <option value="">请选择</option>
+                    <option value="北京">北京</option>
             </select>
+            <em class="vip_select_span" style="display: none;color: red;margin-left: 5px;">请您填写完整的地区信息</em>
         </div> 
         <div class="mt15">
-            <span>详细地址：</span><input type="text"  class=""  />
+            <span>详细地址：</span>
+            <input type="text"  class="vip_site"  />
+            <em class="vip_site_span" style="display: none;color: red;margin-left: 5px;">请您填写收货人详细地址</em>
         </div>
         <div class="mt15">
-            <span>手机号码：</span><input type="text" maxlength="11" class=""  /><span>固定电话：</span><input type="text" placeholder='' class=""  />
+            <span>手机号码：</span>
+            <input type="text" maxlength="11" class="vip_tel"  />
+            <em class="vip_tel_span1" style="display: none;color: red;margin-left: 5px;">请您填写收货人手机号码</em>
+            <em class="vip_tel_span2" style="display: none;color: red;margin-left: 5px;">手机号码格式不正确</em>
         </div>
         <div class="mt15">
-            <span>邮箱：</span><input type="text"  class=""  /><br />
+            <span>邮箱：</span>
+            <input type="text"  class="vip_email"  />
+            <em class="vip_email_span1" style="display: none;color: red;margin-left: 5px;">请您填写收货人邮箱</em>
+            <em class="vip_email_span2" style="display: none;color: red;margin-left: 5px;">邮箱格式不正确</em>
         </div>
         <div class="mt15" style="padding-bottom: 50px;">
-            <span></span><input type="submit" value='保存收货人信息' class="save"  />
+            <span></span>
+            <input type="submit" value='保存收货人信息' style="height: 28px;width: 18%;" class="save"  />
         </div>
     </div>
 </div>
@@ -51,7 +66,7 @@
         <div id="logo">
             <a href="#" class="link1" target="_blank"><img src="images/logo.png" alt=""></a>
         </div>
-        <div class="stepflex" id="#sflex03">
+        <div class="stepflex" id="sflex03">
             <dl class="first done">
                 <dt class="s-num">1</dt>
                 <dd class="s-text">1.我的购物车</dd>
