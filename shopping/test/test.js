@@ -30,8 +30,10 @@ function addToCart(){
     var service = {};  
     service.inter_num = "0050";   
     service.servicecode = "1001";
-    service.goodid = "1";
-    service.uerid = "1";
+    service.goods_id = "1";
+    service.user_id = "1";
+    service.goods_number = "1";
+    service.rec_type = "0";
     service = JSON.stringify(service);
     
     var send_url = rooturl + "/../webapi/index.php";
