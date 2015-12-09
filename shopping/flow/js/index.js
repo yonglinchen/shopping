@@ -18,7 +18,16 @@ $(function(){
             $(".shop_price").text(data.data[0].shop_price);
             $(".market_price").text(data.data[0].market_price);
             $(".goodnum").val(data.data[0].goods_number);
-            $(".default_img").attr("src",data.data[0].images[0].good_img);
+            
+            $(".default_img").attr("src","images/"+data.data[0].images[0].good_img);
+                $(".default_img").attr("jqimg","images/"+data.data[0].images[0].good_img);
+            var imgList = data.data[0].images;
+            for(var _i = 0;_i<imgList.length;_i++){
+                //alert(data.data[0].images[_i].good_img);
+                $(".list-h").css("width","310px");
+                $(".list-h").append('<li><img src="images/'+data.data[0].images[_i].good_img+'" style="border: 1px solid rgb(204, 204, 204); padding: 2px;" /></li>');
+            }
+           
         } else {
             console.log(data);            
         }
