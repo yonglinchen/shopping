@@ -60,7 +60,9 @@ function dealCartFlow($body){
                 if(!$result){
                     $result_data["status"] = -1;
                     $result_data["desc"] = "商品加入购物车失败";
-                } 
+                } else {
+                    $result_data["desc"] = "商品加入购物车成功";
+                }
 
              }else {
                  $result_data["status"] = -1;
