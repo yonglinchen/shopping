@@ -1,10 +1,91 @@
 $(function(){
     //添加收货人地址
-    $(".save").click(function(){
+    $(".save").click(function(){ 
+    var vip_name = $(".vip_name").val();//姓名
+    if($.trim(vip_name) == ''){
+        $(".vip_name_span").show();
+        $(".vip_name").focus();
+        return false;
+    }else{
+        $(".vip_name_span").hide();
+    }
+    
+    var vip_select1 = $(".vip_select1").val();//地区信息
+    if($.trim(vip_select1) == ''){
+        $(".vip_select_span").show();
+        $(".vip_select1").focus();
+        return false;
+    }else{
+        $(".vip_select_span").hide();
+    }
+    var vip_select2 = $(".vip_select2").val();
+    if($.trim(vip_select2) == ''){
+        $(".vip_select_span").show();
+        $(".vip_select2").focus();
+        return false;
+    }else{
+        $(".vip_select_span").hide();
+    }
+    var vip_select3 = $(".vip_select3").val();
+    if($.trim(vip_select3) == ''){
+        $(".vip_select_span").show();
+        $(".vip_select3").focus();
+        return false;
+    }else{
+        $(".vip_select_span").hide();
+    }
+    var vip_site = $(".vip_site").val();//详细地址
+    if($.trim(vip_site) == ''){
+        $(".vip_site_span").show();
+        $(".vip_site").focus();
+        return false;
+    }else{
+        $(".vip_site_span").hide();
+    }
+    
+    var vip_tel = $(".vip_tel").val(); //电话
+    if($.trim(vip_tel) == ''){
+        $(".vip_tel_span2").hide();
+        $(".vip_tel_span1").show();
+        $(".vip_tel").focus();
+        return false;
+    }else{
+        $(".vip_tel_span1").hide();
+    }
+    var reg = /^\d{11}$/;
+    if(!reg.test(vip_tel)) {
+        $(".vip_tel_span1").hide();
+        $(".vip_tel_span2").show();
+        $(".vip_tel").focus();
+        return false;
+    }else{
+        $(".vip_tel_span2").hide();
+    }
+
+    var vip_email = $(".vip_email").val(); //邮箱
+    if($.trim(vip_email) == ''){
+        $(".vip_email_span2").hide();
+        $(".vip_email_span1").show();
+        $(".vip_email").focus();
+        return false;
+    }else{
+        $(".vip_email_span1").hide();
+    }
+    var reg2= /^[a-z0-9]+([._\\-]*[a-z0-9])*@([a-z0-9]+[-a-z0-9]*[a-z0-9]+.){1,63}[a-z0-9]+$/;
+    if(!reg2.test(vip_email)) {
+        $(".vip_email_span1").hide();
+        $(".vip_email_span2").show();
+        $(".vip_email").focus();
+        return false;
+    }else{
+        $(".vip_email_span2").hide();
+    }
+        
     $('.mask').fadeOut(100);
     $('.collect').slideUp(200);
     $("#consignee-list").append('<li class="ui-switchable-panel"><div class="consignee-item"><span>姬单单 北京</span><b></b></div><div class="addr-detail"><span class="addr-name" title="姬单单">姬单单</span><span class="addr-info">北京 朝阳区 四环到五环之间 北京市朝阳区望京福码大厦A座18层</span><span class="addr-tel">132****7353</span></div><div class="op-btns" style="display:none;"><a href="javascript:;" class="ftx-05 setdefault-consignee">设为默认地址</a><a href="javascript:;" class="ftx-05 edit-consignee" onclick="use_NewConsignee()">编辑</a><a href="javascript:;" class="ftx-05 del-consignee">删除</a></div></li>')
     });
+    
     //设置默认地址背景颜色以及文字显示与隐藏
     $(".op-btns").hide();
     $(".ui-switchable-panel").live("mousemove",function(){
