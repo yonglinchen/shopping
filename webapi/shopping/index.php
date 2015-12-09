@@ -84,7 +84,7 @@ function dealCartFlow($body){
             $user_id = "1";
             $sql_userCartGoodList = "select ct.goods_id, ct.goods_sn, ct.goods_name, ct.goods_number, ct.market_price, ct.goods_price, gd.goods_desc from cart as ct join goods as gd on ct.goods_id = gd.goods_id"
                     . " where user_id = " . $user_id;
-            print_r($sql_userCartGoodList);exit();
+
             $_userCartGoodList = $mysqliObj->get_all($sql_userCartGoodList);
             $result_data["data"] = $_userCartGoodList;
             /** 用户购物车列表展示  -  业务处理 end */
