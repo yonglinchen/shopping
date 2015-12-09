@@ -29,7 +29,7 @@ $(function () {
             "border": "2px solid #ff6600",
             "padding": "1px"
         });
-    }).bind("mouseout", function () {
+    }).live("mouseout", function () {
         $(this).css({
             "border": "1px solid #ccc",
             "padding": "2px"
