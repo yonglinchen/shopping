@@ -58,7 +58,7 @@ function addToCart(){
             //console.log(data);
         } else {
             location.href="errorToCart.html";
-            //console.log(data);
+            //console.log(data);   
         }
     });  
 }
