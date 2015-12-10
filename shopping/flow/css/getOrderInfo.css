@@ -43,6 +43,7 @@ a{text-decoration: none;}
 .payment-item-hover:hover{border: 2px solid #e4393c;padding: 4px 23px;}
 
 /*送货清单*/
+.goods-item{ clear: both}
 .step-give{clear: both;font-weight: bold; color: #000; line-height: 40px;}
 .p-img{display: inline-block; float: left; margin-right: 10px;}
 .p-name{width: 300px;float: left;margin-right: 10px;}
