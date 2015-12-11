@@ -284,15 +284,15 @@ function dealCartFlow($body){
             $_addressList = $mysqliObj->get_all($sql_address);
              
             $sql_address2 = "select re.region_name from user_address as ua   "
-                    . "left join region as re on ua.province = re.region_id where user_id =  " . $user_id;
+                    . "left join region as re on ua.province = re.region_id where user_id =  " . $user_id. " order by ua.status desc";
             $_addressList2 = $mysqliObj->get_all($sql_address2);
             
             $sql_address3 = "select re.region_name from user_address as ua  "
-                    . "left join region as re on ua.city = re.region_id where user_id = " . $user_id;
+                    . "left join region as re on ua.city = re.region_id where user_id = " . $user_id. " order by ua.status desc";
             $_addressList3 = $mysqliObj->get_all($sql_address3);
             
             $sql_address4 = "select re.region_name from user_address as ua  "
-                    . "left join region as re on ua.district = re.region_id where user_id = " . $user_id;
+                    . "left join region as re on ua.district = re.region_id where user_id = " . $user_id. " order by ua.status desc";
             $_addressList4 = $mysqliObj->get_all($sql_address4);
            
             foreach($_addressList as $k => $v){
