@@ -82,8 +82,11 @@ function dealCartFlow($body){
         case "1002"://用户购物车列表展示 
             /** 用户购物车列表展示  -  业务处理 start */
             $user_id = "1";
-            $sql_userCartGoodList = "select ct.goods_id, ct.goods_sn, ct.goods_name, ct.goods_number, ct.market_price, ct.goods_price, gd.goods_desc from cart as ct join goods as gd on ct.goods_id = gd.goods_id"
-                    . " where user_id = " . $user_id;
+            $sql_userCartGoodList = "select ct.goods_id, ct.goods_sn, ct.goods_name, ct.goods_number, "
+                    . "ct.market_price, ct.goods_price, gd.goods_desc, gdimg.good_img from cart as ct "
+                    . "join goods as gd on ct.goods_id = gd.goods_id "
+                    . "join goods_img as gdimg on gdimg.goods_id = gd.goods_id  and  gdimg.master = 1"
+                    . " where ct.user_id = " . $user_id;
 
             $_userCartGoodList = $mysqliObj->get_all($sql_userCartGoodList);
             $result_data["data"] = $_userCartGoodList;
@@ -271,6 +274,49 @@ function dealCartFlow($body){
                 }  
             }
             /** 设置收货人地址  -  业务处理 end */
+            break;
+        case "1009"://订单信息展示
+            /** 订单信息展示  -  业务处理 start */
+            $user_id = "1";
+            //收货人信息
+            $sql_address = "select ua.address_id, ua.consignee, ua.email, ua.address, ua.mobile, ua.zipcode, ua.province, ua.city, ua.district, ua.status "
+                    . " from user_address as ua " . " where user_id = " . $user_id . " order by ua.status desc";
+            $_addressList = $mysqliObj->get_all($sql_address);
+             
+            $sql_address2 = "select re.region_name from user_address as ua   "
+                    . "left join region as re on ua.province = re.region_id where user_id =  " . $user_id;
+            $_addressList2 = $mysqliObj->get_all($sql_address2);
+            
+            $sql_address3 = "select re.region_name from user_address as ua  "
+                    . "left join region as re on ua.city = re.region_id where user_id = " . $user_id;
+            $_addressList3 = $mysqliObj->get_all($sql_address3);
+            
+            $sql_address4 = "select re.region_name from user_address as ua  "
+                    . "left join region as re on ua.district = re.region_id where user_id = " . $user_id;
+            $_addressList4 = $mysqliObj->get_all($sql_address4);
+           
+            foreach($_addressList as $k => $v){
+                $_addressList[$k]["province"] = $_addressList2[$k]["region_name"];
+                $_addressList[$k]["city"] = $_addressList3[$k]["region_name"];
+                $_addressList[$k]["district"] = $_addressList4[$k]["region_name"];
+            }
+           
+            
+            $result_data["data"]["addressList"] = $_addressList;
+            //支付方式
+            $sql_payment = "select pay_id, pay_code, pay_name from payment";
+            $_paymentList = $mysqliObj->get_all($sql_payment);
+            $result_data["data"]["paymentList"] = $_paymentList;
+            //送货清单
+            $sql_userCartGoodList = "select ct.goods_id, ct.goods_sn, ct.goods_name, ct.goods_number, "
+                    . "ct.market_price, ct.goods_price, gd.goods_desc, gdimg.good_img from cart as ct "
+                    . "join goods as gd on ct.goods_id = gd.goods_id "
+                    . "join goods_img as gdimg on gdimg.goods_id = gd.goods_id  and  gdimg.master = 1"
+                    . " where ct.user_id = " . $user_id;
+
+            $_cartGoodList = $mysqliObj->get_all($sql_userCartGoodList);
+            $result_data["data"]["cartGoodList"] = $_cartGoodList;
+            /** 订单信息展示  -  业务处理 end */
             break;
     }
     
