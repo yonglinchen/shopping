@@ -243,6 +243,35 @@ function dealCartFlow($body){
             }
             /** 删除收货人地址  -  业务处理 end */
             break;
+        case "1008"://设置收货人地址
+            /** 设置收货人地址  -  业务处理 start */
+            $user_id = 1;
+            $where = "address_id=" . $body["address_id"] . " and user_id=" . $user_id;
+            $where2 = "address_id <>" . $body["address_id"] . " and user_id=" . $user_id;
+            $sql_data = "select count(*) as total from user_address where " . $where;
+            $shopData  = $mysqliObj->real_get($sql_data);  
+            if($shopData["total"] == 0){
+                $result_data["status"] = -1;
+                $result_data["desc"] = "收货人地址不存在";
+            } else {
+                $sql_data = "update user_address set status = 1 where " . $where;
+                $result = $mysqliObj->execute($sql_data);
+                if(!$result){
+                    $result_data["status"] = -1;
+                    $result_data["desc"] = "设置收货人地址失败";
+                } else {
+                    $sql_data2 = "update user_address set status = 0 where " . $where2;
+                    $result2 = $mysqliObj->execute($sql_data2);
+                    if(!$result2){
+                        $result_data["status"] = -1;
+                        $result_data["desc"] = "设置收货人地址失败";
+                    } else {
+                        $result_data["desc"] = "设置收货人地址成功";
+                    }  
+                }  
+            }
+            /** 设置收货人地址  -  业务处理 end */
+            break;
     }
     
     return $result_data;
