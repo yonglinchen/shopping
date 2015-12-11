@@ -46,6 +46,7 @@ a{text-decoration: none;}
 .goods-item{ clear: both}
 .step-give{clear: both;font-weight: bold; color: #000; line-height: 40px;}
 .p-img{display: inline-block; float: left; margin-right: 10px;}
+.p-img img{ width: 80px; height: 80px;}
 .p-name{width: 300px;float: left;margin-right: 10px;}
 .p-name a{text-decoration: none; color: #666;}
 .p-price{float: left;margin-right: 10px; width: 300px;; }
