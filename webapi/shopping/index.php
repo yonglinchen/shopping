@@ -162,12 +162,19 @@ function dealCartFlow($body){
             $result_data["data"] = $area;
             /** 地区联动展示  -  业务处理 end */
             break;
-        case "1006"://新增收货人地址
-            /** 新增收货人地址  -  业务处理 start */
+        case "1006"://新增、编辑收货人地址
+            /** 新增、编辑收货人地址  -  业务处理 start */
             $info = $body;
             unset($info["inter_num"]);
-            unset($info["servicecode"]);  
+            unset($info["servicecode"]); 
+            unset($info["address_id"]);
             $info["user_id"] = 1;
+            
+            $isNew = true;
+            if($info["type"] != 0){//编辑
+                $isNew = false;    
+            }
+            unset($info["type"]);  
             
             $where = "";
             foreach($info as $k => $v){
@@ -176,25 +183,42 @@ function dealCartFlow($body){
             $where = substr($where, 0,  strlen($where) - 5);
             
             $sql_data = "select count(*) as total from user_address where " . $where;
-            $shopData  = $mysqliObj->real_get($sql_data);   
-            
-            if($shopData["total"] == 0){
-                $get_db_sql = $mysqliObj->get_insert_db_sql("user_address",$info);
+            $shopData  = $mysqliObj->real_get($sql_data);  
 
-                $result = $mysqliObj->execute($get_db_sql);
+            if($isNew){
+               if($shopData["total"] == 0){
+                    $get_db_sql = $mysqliObj->get_insert_db_sql("user_address",$info);
 
-                if(!$result){
-                    $result_data["status"] = -1;
-                    $result_data["desc"] = "新增收货人地址失败";
+                    $result = $mysqliObj->execute($get_db_sql);
+
+                    if(!$result){
+                        $result_data["status"] = -1;
+                        $result_data["desc"] = "新增收货人地址失败";
+                    } else {
+                        $result_data["desc"] = "新增收货人地址成功";
+                    }
                 } else {
-                    $result_data["desc"] = "新增收货人地址成功";
-                }
-            } else {
-                $result_data["status"] = -1;
-                $result_data["desc"] = "收货人地址已经存在";
+                    $result_data["status"] = -1;
+                    $result_data["desc"] = "收货人地址已经存在";
+                } 
+            } else {//编辑
+                if($shopData["total"] == 0){
+                    $result_data["status"] = -1;
+                    $result_data["desc"] = "收货人地址不存在";
+                } else {
+                    $where = "address_id=" . $body["address_id"] . " and user_id=" . $info["user_id"];
+                    $get_db_sql = $mysqliObj->get_update_db_sql("user_address",$info, $where);
+                    $result = $mysqliObj->execute($get_db_sql);
+
+                    if(!$result){
+                        $result_data["status"] = -1;
+                        $result_data["desc"] = "编辑收货人地址失败";
+                    } else {
+                        $result_data["desc"] = "编辑收货人地址成功";
+                    }  
+                } 
             }
-            
-            /** 新增收货人地址  -  业务处理 end */
+            /** 新增、编辑收货人地址  -  业务处理 end */
             break;
     }
     
