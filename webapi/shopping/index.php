@@ -135,6 +135,34 @@ function dealCartFlow($body){
             }
             /** 用户购物车商品删除  -  业务处理 end */
             break;
+        case "1005"://地区联动展示
+            /** 地区联动展示  -  业务处理 start */
+            $area = array();
+            $sql_country = "select region_id, region_name, region_type from region where parent_id = 0 and region_type = 0";//国家
+            $_country = $mysqliObj->get_all($sql_country);
+            $area = $_country;
+            foreach($area as $key => $country){//改为递归
+                $sql_province = "select region_id, region_name, region_type from region where parent_id = ". $country["region_id"] ." and region_type = 1";//省（直辖市）
+                $_province = $mysqliObj->get_all($sql_province);
+                $area[$key]["child"] = $_province;
+                
+                foreach($area[$key]["child"] as $k => $v){
+                    $sql_city = "select region_id, region_name, region_type from region where parent_id = ". $v["region_id"] ." and region_type = 2";//省级市（直辖市区）
+                    $_city = $mysqliObj->get_all($sql_city);
+                    $area[$key]["child"][$k]["child"] = $_city;
+                    
+                    foreach($area[$key]["child"][$k]["child"] as $k2 => $v2){
+                        $sql_town = "select region_id, region_name, region_type from region where parent_id = ". $v2["region_id"] ." and region_type = 3";//地级市（县）
+                        $_town = $mysqliObj->get_all($sql_town);
+                        $area[$key]["child"][$k]["child"][$k2]["child"] = $_town;
+                    }
+                }
+            }
+            
+            $result_data["data"] = $area;
+            /** 地区联动展示  -  业务处理 end */
+            break;
+        
     }
     
     return $result_data;
