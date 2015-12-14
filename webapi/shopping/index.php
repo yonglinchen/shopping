@@ -181,7 +181,9 @@ function dealCartFlow($body){
             
             $where = "";
             foreach($info as $k => $v){
-                $where .= $k . "='" . $v . "' and ";
+                if($k == "address_id" || $k == "user_id"){
+                    $where .= $k . "='" . $v . "' and ";
+                }
             }
             $where = substr($where, 0,  strlen($where) - 5);
             
