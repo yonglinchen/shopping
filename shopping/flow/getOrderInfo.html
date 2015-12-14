@@ -18,48 +18,45 @@
         <a href="javascript:;" title="关闭" class="close fr">×</a>
     </div>
     <div class="poptit_01">
-        <div class="" style="padding-top: 15px;">
-            <span>收货人：</span>
-            <input type="text" maxlength="5" class="vip_name"  />
-            <em class="vip_name_span" style="display: none;color: red;margin-left: 5px;">请您填写收货人姓名</em>
-        </div>
-        <div class="mt15">
-            <span>所在地区：</span>
-            <select class="vip_select1">
-                    <option value="">请选择</option>
-                    <option value="北京">北京</option>
-            </select>
-            <select class="vip_select2">
-                    <option value="">请选择</option>
-                    <option value="北京">北京</option>
-            </select>
-            <select class="vip_select3">
-                    <option value="">请选择</option>
-                    <option value="北京">北京</option>
-            </select>
-            <em class="vip_select_span" style="display: none;color: red;margin-left: 5px;">请您填写完整的地区信息</em>
-        </div> 
-        <div class="mt15">
-            <span>详细地址：</span>
-            <input type="text"  class="vip_site"  />
-            <em class="vip_site_span" style="display: none;color: red;margin-left: 5px;">请您填写收货人详细地址</em>
-        </div>
-        <div class="mt15">
-            <span>手机号码：</span>
-            <input type="text" maxlength="11" class="vip_tel"  />
-            <em class="vip_tel_span1" style="display: none;color: red;margin-left: 5px;">请您填写收货人手机号码</em>
-            <em class="vip_tel_span2" style="display: none;color: red;margin-left: 5px;">手机号码格式不正确</em>
-        </div>
-        <div class="mt15">
-            <span>邮箱：</span>
-            <input type="text"  class="vip_email"  />
-            <em class="vip_email_span1" style="display: none;color: red;margin-left: 5px;">请您填写收货人邮箱</em>
-            <em class="vip_email_span2" style="display: none;color: red;margin-left: 5px;">邮箱格式不正确</em>
-        </div>
-        <div class="mt15" style="padding-bottom: 50px;">
-            <span></span>
-            <input type="submit" value='保存收货人信息' style="height: 28px;width: 18%;" class="save"  />
-        </div>
+            <div class="" style="padding-top: 15px;">
+                <span>收货人：</span>
+                <input type="text" maxlength="5" class="vip_name"  />
+                <em class="vip_name_span" style="display: none;color: red;margin-left: 5px;">请您填写收货人姓名</em>
+            </div>
+            <div class="mt15">
+                <span>所在地区：</span>
+                <select class="vip_select1">
+                        <option value="">请选择</option>
+                </select>
+                <select class="vip_select2">
+                        <option value="">请选择</option>
+                </select>
+                <select class="vip_select3">
+                        <option value="">请选择</option>
+                </select>
+                <em class="vip_select_span" style="display: none;color: red;margin-left: 5px;">请您填写完整的地区信息</em>
+            </div> 
+            <div class="mt15">
+                <span>详细地址：</span>
+                <input type="text"  class="vip_site"  />
+                <em class="vip_site_span" style="display: none;color: red;margin-left: 5px;">请您填写收货人详细地址</em>
+            </div>
+            <div class="mt15">
+                <span>手机号码：</span>
+                <input type="text" maxlength="11" class="vip_tel"  />
+                <em class="vip_tel_span1" style="display: none;color: red;margin-left: 5px;">请您填写收货人手机号码</em>
+                <em class="vip_tel_span2" style="display: none;color: red;margin-left: 5px;">手机号码格式不正确</em>
+            </div>
+            <div class="mt15">
+                <span>邮箱：</span>
+                <input type="text"  class="vip_email"  />
+                <em class="vip_email_span1" style="display: none;color: red;margin-left: 5px;">请您填写收货人邮箱</em>
+                <em class="vip_email_span2" style="display: none;color: red;margin-left: 5px;">邮箱格式不正确</em>
+            </div>
+            <div class="mt15" style="padding-bottom: 50px;">
+                <span></span>
+                <input type="submit" value='保存收货人信息' style="height: 28px;width: 18%;" onclick="addUserAddr()"  />
+            </div>
     </div>
 </div>
 <div class="container">
@@ -98,7 +95,7 @@
             </div>
             <div class="consignee-cont consignee-scroll">
                 <ul id="consignee-list">
-                    <li class="ui-switchable-panel">
+<!--                    <li class="ui-switchable-panel">
                         <div class="consignee-item item-selected">
                             <span>姬单单 北京</span><b></b>			
                         </div>
@@ -127,22 +124,7 @@
                             <a href="javascript:;" class="ftx-05 edit-consignee" onclick="use_NewConsignee()">编辑</a>
                             <a href="javascript:;" class="ftx-05 del-consignee">删除</a>
                         </div>
-                    </li>
-                    <li class="ui-switchable-panel">
-                        <div class="consignee-item">
-                            <span>姬单单 北京</span><b></b>			
-                        </div>
-                        <div class="addr-detail">
-                            <span class="addr-name" title="姬单单">姬单单</span>
-                            <span class="addr-info" >北京 朝阳区 四环到五环之间 北京市朝阳区望京福码大厦A座18层</span>
-                            <span class="addr-tel">132****7353</span>
-                        </div>
-                        <div class="op-btns">
-                            <a href="javascript:;" class="ftx-05 setdefault-consignee">设为默认地址</a>
-                            <a href="javascript:;" class="ftx-05 edit-consignee" onclick="use_NewConsignee()">编辑</a>
-                            <a href="javascript:;" class="ftx-05 del-consignee">删除</a>
-                        </div>
-                    </li>
+                    </li>-->
                 </ul>
             </div>
             <!--收货人地址结束-->
@@ -152,16 +134,16 @@
                 <h3>支付方式</h3>
             </div>
             <div class="list-cont">
-                <ul id="payment-list">														
-                    <li style="cursor: pointer;">
+                <ul id="payment-list">										
+<!--                    <li style="cursor: pointer;">
                         <div class="payment-item online-payment">货到付款</div>
                     </li>
-                    <li style="cursor: pointer;" onclick="save_Pay(4);">						
+                    <li style="cursor: pointer;">						
                         <div class="payment-item item-selected online-payment">在线支付</div>
                     </li>
                     <li style="cursor: pointer;">
                         <div class="payment-item online-payment">公司付款</div>
-                    </li>
+                    </li>-->
                 </ul>
             </div>
             <div class="line"></div>
