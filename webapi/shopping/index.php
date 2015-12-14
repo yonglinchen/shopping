@@ -317,6 +317,11 @@ function dealCartFlow($body){
 
             $_cartGoodList = $mysqliObj->get_all($sql_userCartGoodList);
             $result_data["data"]["cartGoodList"] = $_cartGoodList;
+            
+            $result_data["data"]["total"] = 0;
+            foreach($result_data["data"]["cartGoodList"] as $k => $value){
+                $result_data["data"]["total"]  = $result_data["data"]["total"] + $value["goods_price"] * $value["goods_number"];    
+            }
             /** 订单信息展示  -  业务处理 end */
             break;
     }
