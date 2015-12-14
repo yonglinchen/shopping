@@ -7,11 +7,12 @@ $(function(){
     var send_url = rooturl + "/../webapi/index.php";
     apiSendAjax(send_url, service, true, function (status, data) {
         if(status == 0){
+            $("#payPriceId").text("￥"+data.data.total);
             var addressList = data.data.addressList; //读取地址数据
             var Default = null;
             for(var _j=0; _j<addressList.length; _j++){
                 addressList[_j].status == 1 ? Default = 'item-selected' : Default = '';
-                $("#consignee-list").append('<li class="ui-switchable-panel"><div class="consignee-item '+Default+'"><input type="hidden" value="'+addressList[_j].address_id+'" class="address_id"><span>'+addressList[_j].consignee+' '+addressList[_j].province+'</span><b></b></div><div class="addr-detail"><span class="addr-name">'+addressList[_j].consignee+' </span><span class="addr-info"><font class="per_province">'+addressList[_j].province+'</font> <font class="per_city">'+addressList[_j].city+'</font> <font class="per_district">'+addressList[_j].district+'</font> <font class="per_address">'+addressList[_j].address+'</font></span><input type="hidden" class="per_email" value="'+addressList[_j].email+'"><span class="addr-tel">'+addressList[_j].mobile+'</span></div><div class="op-btns" style="display:none;"><a href="javascript:;" class="ftx-05 setdefault-consignee">设为默认地址</a><a href="javascript:;" class="ftx-05 edit-consignee" onclick="use_EditConsignee(this)">编辑</a><a href="javascript:;" class="ftx-05 del-consignee">删除</a></div></li>');
+                $("#consignee-list").append('<li class="ui-switchable-panel"><div class="consignee-item '+Default+'"><input type="hidden" value="'+addressList[_j].address_id+'" class="address_id"><span><font class="addr-name">'+addressList[_j].consignee+'</font> <font class="per_province">'+addressList[_j].province+'</font></span><b></b></div><div class="addr-detail"><span class="addr-name">'+addressList[_j].consignee+' </span><span class="addr-info"><font class="per_province">'+addressList[_j].province+'</font> <font class="per_city">'+addressList[_j].city+'</font> <font class="per_district">'+addressList[_j].district+'</font> <font class="per_address">'+addressList[_j].address+' </font></span><input type="hidden" class="per_email" value="'+addressList[_j].email+'"><span class="addr-tel">'+addressList[_j].mobile+'</span></div><div class="op-btns" style="display:none;"><a href="javascript:;" class="ftx-05 setdefault-consignee">设为默认地址</a><a href="javascript:;" class="ftx-05 edit-consignee" onclick="use_EditConsignee(this)">编辑</a><a href="javascript:;" class="ftx-05 del-consignee">删除</a></div></li>');
             }
             var paymentList = data.data.paymentList;  //读取支付方式
             var Default2 = null;
@@ -204,7 +205,7 @@ $(function(){
                 var Province2 = $(".vip_select1").find("option:selected").text();
                 var City2 = $(".vip_select2").find("option:selected").text();
                 var District2 = $(".vip_select3").find("option:selected").text();
-                $("#consignee-list").append('<li class="ui-switchable-panel"><div class="consignee-item"><input type="hidden" value="'+data.data.address_id+'" class="address_id"><span>'+name+' '+Province2+'</span><b></b></div><div class="addr-detail"><span class="addr-name">'+name+' </span><span class="addr-info"><font class="per_province">'+Province2+'</font> <font class="per_city">'+City2+'</font> <font class="per_district">'+District2+'</font> <font class="per_address">'+address+'</font></span><input type="hidden" class="per_email" value="'+email+'"><span class="addr-tel">'+tel+'</span></div><div class="op-btns" style="display:none;"><a href="javascript:;" class="ftx-05 setdefault-consignee">设为默认地址</a><a href="javascript:;" class="ftx-05 edit-consignee" onclick="use_EditConsignee(this)">编辑</a><a href="javascript:;" class="ftx-05 del-consignee">删除</a></div></li>');
+                $("#consignee-list").append('<li class="ui-switchable-panel"><div class="consignee-item"><input type="hidden" value="'+data.data.address_id+'" class="address_id"><span><font class="addr-name">'+name+'</font> <font class="per_province">'+Province2+'</font></span><b></b></div><div class="addr-detail"><span class="addr-name">'+name+' </span><span class="addr-info"><font class="per_province">'+Province2+'</font> <font class="per_city">'+City2+'</font> <font class="per_district">'+District2+'</font> <font class="per_address">'+address+' </font></span><input type="hidden" class="per_email" value="'+email+'"><span class="addr-tel">'+tel+'</span></div><div class="op-btns" style="display:none;"><a href="javascript:;" class="ftx-05 setdefault-consignee">设为默认地址</a><a href="javascript:;" class="ftx-05 edit-consignee" onclick="use_EditConsignee(this)">编辑</a><a href="javascript:;" class="ftx-05 del-consignee">删除</a></div></li>');
                 console.log(data);
             } else {
                 console.log(data);
@@ -212,7 +213,7 @@ $(function(){
         }); 
     });   
 });
-
+/*公共的表单验证*/
 function common_reg(){
     var vip_name = $(".vip_name").val();//姓名
     if($.trim(vip_name) == ''){
@@ -297,6 +298,7 @@ function common_reg(){
 }
 /*编辑收货人地址信息*/
 function use_EditConsignee(obj){
+    $(".poptit span").text("编辑收货人地址");
     $(".save").hide();
     $(".edit_message").show();
     $('.mask').fadeIn(100);      //弹出窗口
@@ -317,7 +319,6 @@ function use_EditConsignee(obj){
     $(".vip_select1 option").each(function (){
         if($(this).text()==per_province){$(this).attr('selected',true); $(".vip_select1").change(); return false;}}
     );
-    
     $(".vip_select2 option").each(function (){
 	if($(this).text()==per_city){$(this).attr('selected',true); $(".vip_select2").change(); return false;}}
     );
@@ -336,19 +337,14 @@ function use_EditConsignee(obj){
         var address_id = $(obj).parent().siblings(".consignee-item ").find(".address_id").val();
         var vip2_name = $(".vip_name").val();
         var vip2_select1 = $(".vip_select1").val();
+        var vip2_select1_text = $(".vip_select1").find("option:selected").text();
         var vip2_select2 = $(".vip_select2").val();
+        var vip2_select2_text = $(".vip_select2").find("option:selected").text();
         var vip2_select3 = $(".vip_select3").val();
+        var vip2_select3_text = $(".vip_select3").find("option:selected").text();
         var vip2_site = $(".vip_site").val();
         var vip2_tel = $(".vip_tel").val();
         var vip2_email = $(".vip_email").val();
-        //alert(address_id);
-        //alert(vip2_name);
-//        alert(vip2_select1);
-//        alert(vip2_select2);
-//        alert(vip2_select3);
-//        alert(vip2_site);
-//        alert(vip2_tel);
-//        alert(vip2_email);
         var service = {};  
         service.inter_num = "0050";   
         service.servicecode = "1006";
@@ -363,11 +359,19 @@ function use_EditConsignee(obj){
         service.email = vip2_email;//邮箱
         service.type = "1";//编辑
         service = JSON.stringify(service);
-
         var send_url = rooturl + "/../webapi/index.php";
         apiSendAjax(send_url, service, true, function (status, data) {
             if(status == 0){
-                alert(status);
+                $(obj).parent().siblings(".addr-detail").find(".addr-name").text(vip2_name);
+                $(obj).parent().siblings(".consignee-item").find("span .addr-name").text(vip2_name);
+                $(obj).parent().siblings(".consignee-item").find("span .per_province").text(vip2_select1_text);
+                $(obj).parent().siblings(".addr-detail").find(".addr-info").find(".per_province").text(vip2_select1_text);
+                $(obj).parent().siblings(".addr-detail").find(".addr-info").find(".per_address").text(vip2_site);
+                $(obj).parent().siblings(".addr-detail").find(".addr-info").find(".per_city").text(vip2_select2_text);
+                $(obj).parent().siblings(".addr-detail").find(".addr-info").find(".per_district").text(vip2_select3_text);
+                $(obj).parent().siblings(".addr-detail").find(".addr-info").find(".per_address").text(vip2_site);
+                $(obj).parent().siblings(".addr-detail").find(".addr-tel").text(vip2_tel);
+                $(obj).parent().siblings(".addr-detail").find(".per_email").val(vip2_email);
                 $('.mask').fadeOut(100);
                 $('.collect').slideUp(200);
                 console.log(data);
@@ -381,15 +385,11 @@ function use_EditConsignee(obj){
 }
 /*新增收货地址*/
 function use_NewConsignee(){	
+    $(".poptit span").text("新增收货人地址");
     $('.mask').fadeIn(100);      //弹出窗口
     $('.popover_3').slideDown(200);
     $('.close').click(function(){
         $('.mask').fadeOut(100);
         $('.collect').slideUp(200);
     });
-}
-
-/* 编辑收货人地址 接口*/
-function editUserAddr(){
-      
 }
