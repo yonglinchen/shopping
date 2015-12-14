@@ -199,6 +199,7 @@ function dealCartFlow($body){
                         $result_data["desc"] = "新增收货人地址失败";
                     } else {
                         $result_data["desc"] = "新增收货人地址成功";
+                        $result_data["data"]["address_id"] = $mysqliObj->last_id();
                     }
                 } else {
                     $result_data["status"] = -1;
