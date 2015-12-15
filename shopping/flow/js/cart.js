@@ -1,68 +1,4 @@
-!function(){
-    $(function () {
-        var func = new MyFunction();
-        func.init();
-    });
-}();
 
-function MyFunction() {
-    this.init= function () {
-        //this.add();
-        //this.cal();
-        this.check();
-        this.hrefopen();
-       // this.remove();
-    },
-   // this.add= function () {
-     //   var addEevent = $(".increment");
-     //   addEevent.live("click", function () {
-     //       var addNum = parseInt($("#changeNum").val());
-     //       if($("#changeNum").attr("disabled")){
-     //           $("#changeNum").removeAttr("disabled");
-     //       };
-    //        $("#changeNum").val(addNum+1);
-    //    });
-   // },
-    //this.cal=function(){
-    //   var decrement=$("#decrement"),changeNum=$("#changeNum");
-    //   decrement.live("click", function () {
-     //      var calNum = parseInt($("#changeNum").val());
-     //      if(calNum==1){
-    //           changeNum.attr("disabled","disabled");
-    //          return false; 
-    //       };
-    //        changeNum.val(calNum-1);
-           
-    //    });
-   // },
-    this.check=function(){
-        $("#toggle-checkboxes_up,#toggle-checkboxes_down").on("click",function(){
-            this.checked?$("input[type='checkbox']").each(function(){this.checked=true;}):$("input[type='checkbox']").each(function(){this.checked=false;});
-        });
-        $("input[name='checkItem']:checked").on("click",function(){
-            alert(555)
-            $("#toggle-checkboxes_up,#toggle-checkboxes_down").removeAttr("checked"); 
-        });
-       
-    },
-    this.hrefopen=function(){
-        $(".submit-btn").on("click",function(){
-            alert(123);
-            window.location.href= "getOrderInfo.html";
-        });
-       
-    } //,
-    //this.remove=function(){
-    //           $("#remove").on("click",function(){
-     //              $(this).parents("#product").remove();
-     //          });
-     //          $(".remove-batch").on("click",function(){
-     //              $("input[name='checkItem']:checked").each(function(){
-     //                  $(this).parents("#product").remove();
-     //              })
-     //          });
-    //}
-}
     var service = {};  
     service.inter_num = "0050";   
     service.servicecode = "1002";
@@ -90,7 +26,7 @@ function MyFunction() {
                                             <div class="goods-item">\n\
                                                 <div class="p-img">\n\
                                                     <a href="http://item.jd.com/1211545593.html" target="_blank">\n\
-                                                        <img alt="惠齿h2ofloss hf-7C标准型冲牙器家用电动洗牙器洗牙机水牙线洁牙机" src="//img10.360buyimg.com/cms/s80x80_jfs/t493/272/1233115153/267945/b68f3326/54c06caaN495e7d26.jpg">\n\
+                                                        <img alt="" src="images/'+data.data[i].good_img+'">\n\
                                                     </a>\n\
                                                 </div>\n\
                                                 <div class="item-msg">\n\
@@ -124,14 +60,13 @@ function MyFunction() {
                             </div>\n\
                         </div>\n\
                     </div>');
-                   
-                    var num_ = num_+ parseInt(data.data[i].goods_number);
-                    var price_ = price_+ parseFloat($(".strongNum"+data.data[i].goods_id).text());
+                var num_ = num_+ parseInt(data.data[i].goods_number);
+                var price_ = price_+ parseFloat($(".strongNum"+data.data[i].goods_id).text());
             }
             $(".amount-sum_em").text(num_);
             $(".sumPrice_em").text(price_.toFixed(2));
             //增加
-             $(".increment").live("click", function() {
+            $(".increment").live("click", function() {
                 var goods_number = parseFloat($(this).parent().parent().siblings(".p-price_00").find(".goods_number").text());
                 var ids = $(this).attr("ids");
                 var itxtVal = parseInt($(this).siblings(".itxt").val());
@@ -151,13 +86,12 @@ function MyFunction() {
                         $(".strongNum"+ids).text((itxtVal_1*goods_number).toFixed(2));
                         $(".amount-sum_em").text(num_1);
                         $(".sumPrice_em").text(price_1.toFixed(2));
-                    } else {
-                        //console.log(data);
-                    }
+                    } else {//console.log(data);
+                        }
                 }); 
-             })
-             //减少
-             $(".decrement").live("click", function() {
+            })
+            //减少
+            $(".decrement").live("click", function() {
                 var goods_number = parseFloat($(this).parent().parent().siblings(".p-price_00").find(".goods_number").text());
                 var ids = $(this).attr("ids");
                 var itxtVal = parseInt($(this).siblings(".itxt").val());
@@ -180,11 +114,10 @@ function MyFunction() {
                         $(".strongNum"+ids).text(((itxtVal-1)*goods_number).toFixed(2));
                         $(".amount-sum_em").text(num_1);
                         $(".sumPrice_em").text(price_1.toFixed(2));
-                    } else {
-                        //console.log(data);
-                    }
+                    } else {//console.log(data);
+                        }
                 }); 
-             })
+            });
             //删除商品
             $(".remove").live("click",function(){
                 var remove_ids = $(this).attr("remove_ids");
@@ -204,17 +137,14 @@ function MyFunction() {
                 apiSendAjax(send_url, service, true, function (status, data) {
                     if(status == 0){
                         //console.log(data);
-                    } else {
-                        //console.log(data);
-                    }
+                    } else {//console.log(data);
+                        }
                 }); 
-                
             });
             //删除选中的商品
             $(".remove-batch").on("click",function(){
                 $("input[name='checkItem']:checked").each(function(){
                     var remove_ids = $(this).attr("remove_ids");
-                    alert(remove_ids);
                     $(this).parents(".cart-item-list").remove();
                     var service = {};  
                     service.inter_num = "0050";   
@@ -224,19 +154,14 @@ function MyFunction() {
                     var send_url = rooturl + "/../webapi/index.php";
                     apiSendAjax(send_url, service, true, function (status, data) {
                         if(status == 0){
-                            //console.log(data);
                             window.location.reload();
-                        } else {
-                            //console.log(data);
-                        }
+                        } else {//console.log(data);
+                            }
                     }); 
                 })
             });
-                
-        }  else {
-            //console.log(data);
-        }
-        
+        }  else {//console.log(data);
+            }
     }); 
 
     
