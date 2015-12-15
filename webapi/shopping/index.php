@@ -181,7 +181,7 @@ function dealCartFlow($body){
             
             $where = "";
             foreach($info as $k => $v){
-                if($k == "address_id" || $k == "user_id"){
+                if($k == "address_id" || $k == "user_id" || $isNew){
                     $where .= $k . "='" . $v . "' and ";
                 }
             }
