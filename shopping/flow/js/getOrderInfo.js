@@ -155,13 +155,11 @@ $(function(){
     });
 	
     //鼠标放到支付方式上面的时候
-    $('.online-payment').hover(function(){
+    $('.online-payment').live("mousemove",function(){
         $(this).addClass('payment-item-hover');
-    },function(){
-        $(this).removeClass('payment-item-hover');
     }); 
     //选择支付方式 
-    $("#payment-list li").click(function(){
+    $("#payment-list li").live("click",function(){
         $("#payment-list .item-selected").removeClass("item-selected");
         $(this).find(".payment-item").addClass("item-selected");	
     });
