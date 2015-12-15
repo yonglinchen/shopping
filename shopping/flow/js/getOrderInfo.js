@@ -155,13 +155,11 @@ $(function(){
     });
 	
     //鼠标放到支付方式上面的时候
-    $('.online-payment').hover(function(){
+    $('.online-payment').live("mousemove",function(){
         $(this).addClass('payment-item-hover');
-    },function(){
-        $(this).removeClass('payment-item-hover');
     }); 
     //选择支付方式 
-    $("#payment-list li").click(function(){
+    $("#payment-list li").live("click",function(){
         $("#payment-list .item-selected").removeClass("item-selected");
         $(this).find(".payment-item").addClass("item-selected");	
     });
@@ -307,6 +305,7 @@ function use_EditConsignee(obj){
         $('.mask').fadeOut(100);
         $('.collect').slideUp(200);
     });
+    var address_id = $(obj).parent().siblings(".consignee-item ").find(".address_id").val();
     var per_name = $(obj).parent().siblings(".addr-detail").find(".addr-name").text();
     var per_province = $(obj).parent().siblings(".addr-detail").find(".addr-info").find(".per_province").text();
     var per_city = $(obj).parent().siblings(".addr-detail").find(".addr-info").find(".per_city").text();
@@ -325,8 +324,6 @@ function use_EditConsignee(obj){
     $(".vip_select3 option").each(function (){
 	if($(this).text()==per_district){$(this).attr('selected',true); return false;}}
     );
-    
-    //$(".vip_select1").find("option:selected").text(per_province);
     $(".vip_site").val(per_address);
     $(".vip_tel").val(per_tel);
     $(".vip_email").val(per_email);
@@ -334,7 +331,6 @@ function use_EditConsignee(obj){
         if(!common_reg()){
             return false;
         }
-        var address_id = $(obj).parent().siblings(".consignee-item ").find(".address_id").val();
         var vip2_name = $(".vip_name").val();
         var vip2_select1 = $(".vip_select1").val();
         var vip2_select1_text = $(".vip_select1").find("option:selected").text();
@@ -380,11 +376,15 @@ function use_EditConsignee(obj){
             }
         });
     });
-    
-    //alert(per_address);
 }
 /*新增收货地址*/
-function use_NewConsignee(){	
+function use_NewConsignee(){
+    $(".collect input[type='text']").attr("value","");
+    $(".vip_select1").find("option:selected").removeAttr("selected");
+    $(".vip_select2").html("");
+    $(".vip_select2").append('<option value>请选择</option>');
+    $(".vip_select3").html("");
+    $(".vip_select3").append('<option value>请选择</option>');
     $(".poptit span").text("新增收货人地址");
     $(".edit_message").hide();
     $(".save").show();
