@@ -27,7 +27,7 @@ function MyFunction() {
        var decrement=$("#decrement"),changeNum=$("#changeNum");
        decrement.on("click", function () {
            var calNum = parseInt($("#changeNum").val());
-           if(calNum==0){
+           if(calNum==1){
                changeNum.attr("disabled","disabled");
               return false; 
            };
