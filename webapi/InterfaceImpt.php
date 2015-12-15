@@ -98,6 +98,9 @@ function base_fun($body_arr){
         require_once(dirname(__FILE__) . "/shopping/index.php");
         $resp_arr = dealCartFlow($body_arr);
         break;
+    case "0051"://会员、积分模块
+        
+        break;
     default:
         $procedure = arr_key_value($inter_num, $_INTERFACE);//根据接口号获取存储名
         //执行存储过程

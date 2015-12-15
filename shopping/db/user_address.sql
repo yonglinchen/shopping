@@ -18,6 +18,7 @@ CREATE TABLE `user_address` (
   `mobile` varchar(60) NOT NULL default '' COMMENT '收货人的手机',
   `sign_building` varchar(120) NOT NULL default '' COMMENT '收货地址的标志性建筑名',
   `best_time` varchar(120) NOT NULL default '' COMMENT '收货人的最佳收货时间',
+  `status` mediumint(8) unsigned NOT NULL default '0' COMMENT '默认用户收货地址',
   PRIMARY KEY  (`address_id`),
   KEY `user_id` (`user_id`)
 )  ENGINE=MyISAM DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC;
