@@ -171,7 +171,7 @@ $(function(){
         location.href = 'pay.html';
     });
     
-    $(".save").live("click",function(){
+    $(".save").click(function(){        
         if(!common_reg()){
             return false;
         }
@@ -199,7 +199,7 @@ $(function(){
 
         var send_url = rooturl + "/../webapi/index.php";
         apiSendAjax(send_url, service, true, function (status, data) {
-            if(status == 0){
+            if(status == 0){                
                 $('.mask').fadeOut(100);
                 $('.collect').slideUp(200);
                 var Province2 = $(".vip_select1").find("option:selected").text();
@@ -386,6 +386,8 @@ function use_EditConsignee(obj){
 /*新增收货地址*/
 function use_NewConsignee(){	
     $(".poptit span").text("新增收货人地址");
+    $(".edit_message").hide();
+    $(".save").show();
     $('.mask').fadeIn(100);      //弹出窗口
     $('.popover_3').slideDown(200);
     $('.close').click(function(){
