@@ -163,8 +163,8 @@
         }  else {//console.log(data);
             }
     }); 
-
-    
-    
-    
-    
+    //去结算
+    $(".submit-btn").on("click",function(){
+        window.location.href= "getOrderInfo.html";
+    });
+ 
