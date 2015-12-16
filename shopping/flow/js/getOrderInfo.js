@@ -306,6 +306,7 @@ function use_EditConsignee(obj){
         $('.collect').slideUp(200);
     });
     var address_id = $(obj).parent().siblings(".consignee-item ").find(".address_id").val();
+    //alert(address_id);
     var per_name = $(obj).parent().siblings(".addr-detail").find(".addr-name").text();
     var per_province = $(obj).parent().siblings(".addr-detail").find(".addr-info").find(".per_province").text();
     var per_city = $(obj).parent().siblings(".addr-detail").find(".addr-info").find(".per_city").text();
@@ -327,7 +328,7 @@ function use_EditConsignee(obj){
     $(".vip_site").val(per_address);
     $(".vip_tel").val(per_tel);
     $(".vip_email").val(per_email);
-    $(".edit_message").click(function(){
+    $(".edit_message").unbind().click(function(){
         if(!common_reg()){
             return false;
         }
