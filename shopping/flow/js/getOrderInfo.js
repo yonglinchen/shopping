@@ -12,7 +12,7 @@ $(function(){
             var Default = null;
             for(var _j=0; _j<addressList.length; _j++){
                 addressList[_j].status == 1 ? Default = 'item-selected' : Default = '';
-                $("#consignee-list").append('<li class="ui-switchable-panel"><div class="consignee-item '+Default+'"><input type="hidden" value="'+addressList[_j].address_id+'" class="address_id"><span><font class="addr-name">'+addressList[_j].consignee+'</font> <font class="per_province">'+addressList[_j].province+'</font></span><b></b></div><div class="addr-detail"><span class="addr-name">'+addressList[_j].consignee+' </span><span class="addr-info"><font class="per_province">'+addressList[_j].province+'</font> <font class="per_city">'+addressList[_j].city+'</font> <font class="per_district">'+addressList[_j].district+'</font> <font class="per_address">'+addressList[_j].address+' </font></span><input type="hidden" class="per_email" value="'+addressList[_j].email+'"><span class="addr-tel">'+addressList[_j].mobile+'</span></div><div class="op-btns" style="display:none;"><a href="javascript:;" class="ftx-05 setdefault-consignee">设为默认地址</a><a href="javascript:;" class="ftx-05 edit-consignee" onclick="use_EditConsignee(this)">编辑</a><a href="javascript:;" class="ftx-05 del-consignee">删除</a></div></li>');
+                $("#consignee-list").append('<li class="ui-switchable-panel panel_li'+addressList[_j].address_id+'"><div class="consignee-item '+Default+'"><input type="hidden" value="'+addressList[_j].address_id+'" class="address_id"><span><font class="addr-name">'+addressList[_j].consignee+'</font> <font class="per_province">'+addressList[_j].province+'</font></span><b></b></div><div class="addr-detail"><span class="addr-name">'+addressList[_j].consignee+' </span><span class="addr-info"><font class="per_province">'+addressList[_j].province+'</font> <font class="per_city">'+addressList[_j].city+'</font> <font class="per_district">'+addressList[_j].district+'</font> <font class="per_address">'+addressList[_j].address+' </font></span><input type="hidden" class="per_email" value="'+addressList[_j].email+'"><span class="addr-tel">'+addressList[_j].mobile+'</span></div><div class="op-btns" style="display:none;"><a href="javascript:;" class="ftx-05 setdefault-consignee" title="'+addressList[_j].address_id+'">设为默认地址</a><a href="javascript:;" class="ftx-05 edit-consignee" onclick="use_EditConsignee(this)" title="'+addressList[_j].address_id+'">编辑</a><a href="javascript:;" class="ftx-05 del-consignee" onclick="use_delete(this)" title="'+addressList[_j].address_id+'">删除</a></div></li>');
             }
             var paymentList = data.data.paymentList;  //读取支付方式
             var Default2 = null;
@@ -135,24 +135,6 @@ $(function(){
             $(this).parent().siblings(".consignee-item").addClass("item-selected");
         }
     });
-    //点击删除
-    $(".del-consignee").live("click",function(){
-        var delete_address_id = $(this).parent().siblings(".consignee-item").find(".address_id").val();
-        var service = {};  
-        service.inter_num = "0050";   
-        service.servicecode = "1007";
-        service.address_id = delete_address_id;
-        service = JSON.stringify(service);
-        var send_url = rooturl + "/../webapi/index.php";
-        apiSendAjax(send_url, service, true, function (status, data) {
-            if(status == 0){
-                console.log(data);
-            } else {
-                console.log(data);
-            }
-        });
-        $(this).parent("div").parent("li").remove();
-    });
 	
     //鼠标放到支付方式上面的时候
     $('.online-payment').live("mousemove",function(){
@@ -194,7 +176,6 @@ $(function(){
         service.email = email;//邮箱
         service.type = "0";//新增
         service = JSON.stringify(service);
-
         var send_url = rooturl + "/../webapi/index.php";
         apiSendAjax(send_url, service, true, function (status, data) {
             if(status == 0){                
@@ -203,14 +184,135 @@ $(function(){
                 var Province2 = $(".vip_select1").find("option:selected").text();
                 var City2 = $(".vip_select2").find("option:selected").text();
                 var District2 = $(".vip_select3").find("option:selected").text();
-                $("#consignee-list").append('<li class="ui-switchable-panel"><div class="consignee-item"><input type="hidden" value="'+data.data.address_id+'" class="address_id"><span><font class="addr-name">'+name+'</font> <font class="per_province">'+Province2+'</font></span><b></b></div><div class="addr-detail"><span class="addr-name">'+name+' </span><span class="addr-info"><font class="per_province">'+Province2+'</font> <font class="per_city">'+City2+'</font> <font class="per_district">'+District2+'</font> <font class="per_address">'+address+' </font></span><input type="hidden" class="per_email" value="'+email+'"><span class="addr-tel">'+tel+'</span></div><div class="op-btns" style="display:none;"><a href="javascript:;" class="ftx-05 setdefault-consignee">设为默认地址</a><a href="javascript:;" class="ftx-05 edit-consignee" onclick="use_EditConsignee(this)">编辑</a><a href="javascript:;" class="ftx-05 del-consignee">删除</a></div></li>');
+                $("#consignee-list").append('<li class="ui-switchable-panel panel_li'+data.data.address_id+'"><div class="consignee-item"><input type="hidden" value="'+data.data.address_id+'" class="address_id"><span><font class="addr-name">'+name+'</font> <font class="per_province">'+Province2+'</font></span><b></b></div><div class="addr-detail"><span class="addr-name">'+name+' </span><span class="addr-info"><font class="per_province">'+Province2+'</font> <font class="per_city">'+City2+'</font> <font class="per_district">'+District2+'</font> <font class="per_address">'+address+' </font></span><input type="hidden" class="per_email" value="'+email+'"><span class="addr-tel">'+tel+'</span></div><div class="op-btns" style="display:none;"><a href="javascript:;" class="ftx-05 setdefault-consignee" title="'+data.data.address_id+'">设为默认地址</a><a href="javascript:;" class="ftx-05 edit-consignee" onclick="use_EditConsignee(this)" title="'+data.data.address_id+'">编辑</a><a href="javascript:;" class="ftx-05 del-consignee" onclick="use_delete(this)" title="'+data.data.address_id+'">删除</a></div></li>');
                 console.log(data);
             } else {
                 console.log(data);
             }
         }); 
-    });   
+    });  
+    
 });
+/*新增收货地址*/
+function use_NewConsignee(){
+    $(".collect input[type='text']").attr("value","");
+    $(".vip_select1").find("option:selected").removeAttr("selected");
+    $(".vip_select2").html("");
+    $(".vip_select2").append('<option value>请选择</option>');
+    $(".vip_select3").html("");
+    $(".vip_select3").append('<option value>请选择</option>');
+    $(".poptit span").text("新增收货人地址");
+    $(".edit_message").hide();
+    $(".save").show();
+    $('.mask').fadeIn(100);      //弹出窗口
+    $('.popover_3').slideDown(200);
+    $('.close').click(function(){
+        $('.mask').fadeOut(100);
+        $('.collect').slideUp(200);
+    });
+}
+/*删除收货人地址*/
+function use_delete(obj){
+    var delete_address_id = $(obj).attr("title");
+    var service = {};  
+    service.inter_num = "0050";   
+    service.servicecode = "1007";
+    service.address_id = delete_address_id;
+    service = JSON.stringify(service);
+    var send_url = rooturl + "/../webapi/index.php";
+    apiSendAjax(send_url, service, true, function (status, data) {
+        if(status == 0){
+            console.log(data);
+        } else {
+            console.log(data);
+        }
+    });
+    $(".panel_li"+delete_address_id).remove();
+}
+/*编辑收货人地址信息*/
+function use_EditConsignee(obj){
+    $(".poptit span").text("编辑收货人地址");
+    $(".save").hide();
+    $(".edit_message").show();
+    $('.mask').fadeIn(100);      //弹出窗口
+    $('.popover_3').slideDown(200);
+    $('.close').click(function(){
+        $('.mask').fadeOut(100);
+        $('.collect').slideUp(200);
+    });
+    var address_id = $(obj).attr("title");
+    alert(address_id);
+    var per_name = $(".panel_li"+address_id).find(".addr-detail").children(".addr-name").text();
+    var per_province = $(".panel_li"+address_id).find(".addr-info").children(".per_province").text();
+    var per_city = $(".panel_li"+address_id).find(".per_city").text();
+    var per_district = $(".panel_li"+address_id).find(".per_district").text();
+    var per_address = $(".panel_li"+address_id).find(".per_address").text();
+    var per_tel = $(".panel_li"+address_id).find(".addr-tel").text();
+    var per_email = $(".panel_li"+address_id).find(".per_email").val(); 
+    
+    $(".vip_name").val(per_name);
+    $(".vip_select1 option").each(function (){
+        if($(this).text()==per_province){$(this).attr('selected',true); $(".vip_select1").change(); return false;}}
+    );
+    $(".vip_select2 option").each(function (){
+	if($(this).text()==per_city){$(this).attr('selected',true); $(".vip_select2").change(); return false;}}
+    );
+    $(".vip_select3 option").each(function (){
+	if($(this).text()==per_district){$(this).attr('selected',true); return false;}}
+    );
+    $(".vip_site").val(per_address);
+    $(".vip_tel").val(per_tel);
+    $(".vip_email").val(per_email);
+    $(".edit_message").unbind().click(function(){
+        if(!common_reg()){
+            return false;
+        }
+        var vip2_name = $(".vip_name").val();
+        var vip2_select1 = $(".vip_select1").val();
+        var vip2_select1_text = $(".vip_select1").find("option:selected").text();
+        var vip2_select2 = $(".vip_select2").val();
+        var vip2_select2_text = $(".vip_select2").find("option:selected").text();
+        var vip2_select3 = $(".vip_select3").val();
+        var vip2_select3_text = $(".vip_select3").find("option:selected").text();
+        var vip2_site = $(".vip_site").val();
+        var vip2_tel = $(".vip_tel").val();
+        var vip2_email = $(".vip_email").val();
+        var service = {};  
+        service.inter_num = "0050";   
+        service.servicecode = "1006";
+        service.address_id = address_id;
+        service.consignee = vip2_name;//收货人
+        service.country = "1";//国家（1）中国
+        service.province = vip2_select1;//省
+        service.city = vip2_select2;//市
+        service.district = vip2_select3;//区
+        service.address = vip2_site;//详细地址
+        service.mobile = vip2_tel;//电话
+        service.email = vip2_email;//邮箱
+        service.type = "1";//编辑
+        service = JSON.stringify(service);
+        var send_url = rooturl + "/../webapi/index.php";
+        apiSendAjax(send_url, service, true, function (status, data) {
+            if(status == 0){
+                $(".panel_li"+address_id).find(".addr-name").text(vip2_name);
+                $(".panel_li"+address_id).find("span .addr-name").text(vip2_name);
+                $(".panel_li"+address_id).find("span .per_province").text(vip2_select1_text);
+                $(".panel_li"+address_id).find(".per_province").text(vip2_select1_text);
+                $(".panel_li"+address_id).find(".per_address").text(vip2_site);
+                $(".panel_li"+address_id).find(".per_city").text(vip2_select2_text);
+                $(".panel_li"+address_id).find(".per_district").text(vip2_select3_text);
+                $(".panel_li"+address_id).find(".per_address").text(vip2_site);
+                $(".panel_li"+address_id).find(".addr-tel").text(vip2_tel);
+                $(".panel_li"+address_id).find(".per_email").val(vip2_email);
+                $('.mask').fadeOut(100);
+                $('.collect').slideUp(200);
+                console.log(data);
+            } else {
+                console.log(data);
+            }
+        });
+    });
+}
 /*公共的表单验证*/
 function common_reg(){
     var vip_name = $(".vip_name").val();//姓名
@@ -293,106 +395,4 @@ function common_reg(){
     }
     
     return true;
-}
-/*编辑收货人地址信息*/
-function use_EditConsignee(obj){
-    $(".poptit span").text("编辑收货人地址");
-    $(".save").hide();
-    $(".edit_message").show();
-    $('.mask').fadeIn(100);      //弹出窗口
-    $('.popover_3').slideDown(200);
-    $('.close').click(function(){
-        $('.mask').fadeOut(100);
-        $('.collect').slideUp(200);
-    });
-    var address_id = $(obj).parent().siblings(".consignee-item ").find(".address_id").val();
-    //alert(address_id);
-    var per_name = $(obj).parent().siblings(".addr-detail").find(".addr-name").text();
-    var per_province = $(obj).parent().siblings(".addr-detail").find(".addr-info").find(".per_province").text();
-    var per_city = $(obj).parent().siblings(".addr-detail").find(".addr-info").find(".per_city").text();
-    var per_district = $(obj).parent().siblings(".addr-detail").find(".addr-info").find(".per_district").text();
-    var per_address = $(obj).parent().siblings(".addr-detail").find(".addr-info").find(".per_address").text();
-    var per_tel = $(obj).parent().siblings(".addr-detail").find(".addr-tel").text();
-    var per_email = $(obj).parent().siblings(".addr-detail").find(".per_email").val();
-    $(".vip_name").val(per_name);
-    //alert(per_province);
-    $(".vip_select1 option").each(function (){
-        if($(this).text()==per_province){$(this).attr('selected',true); $(".vip_select1").change(); return false;}}
-    );
-    $(".vip_select2 option").each(function (){
-	if($(this).text()==per_city){$(this).attr('selected',true); $(".vip_select2").change(); return false;}}
-    );
-    $(".vip_select3 option").each(function (){
-	if($(this).text()==per_district){$(this).attr('selected',true); return false;}}
-    );
-    $(".vip_site").val(per_address);
-    $(".vip_tel").val(per_tel);
-    $(".vip_email").val(per_email);
-    $(".edit_message").unbind().click(function(){
-        if(!common_reg()){
-            return false;
-        }
-        var vip2_name = $(".vip_name").val();
-        var vip2_select1 = $(".vip_select1").val();
-        var vip2_select1_text = $(".vip_select1").find("option:selected").text();
-        var vip2_select2 = $(".vip_select2").val();
-        var vip2_select2_text = $(".vip_select2").find("option:selected").text();
-        var vip2_select3 = $(".vip_select3").val();
-        var vip2_select3_text = $(".vip_select3").find("option:selected").text();
-        var vip2_site = $(".vip_site").val();
-        var vip2_tel = $(".vip_tel").val();
-        var vip2_email = $(".vip_email").val();
-        var service = {};  
-        service.inter_num = "0050";   
-        service.servicecode = "1006";
-        service.address_id = address_id;
-        service.consignee = vip2_name;//收货人
-        service.country = "1";//国家（1）中国
-        service.province = vip2_select1;//省
-        service.city = vip2_select2;//市
-        service.district = vip2_select3;//区
-        service.address = vip2_site;//详细地址
-        service.mobile = vip2_tel;//电话
-        service.email = vip2_email;//邮箱
-        service.type = "1";//编辑
-        service = JSON.stringify(service);
-        var send_url = rooturl + "/../webapi/index.php";
-        apiSendAjax(send_url, service, true, function (status, data) {
-            if(status == 0){
-                $(obj).parent().siblings(".addr-detail").find(".addr-name").text(vip2_name);
-                $(obj).parent().siblings(".consignee-item").find("span .addr-name").text(vip2_name);
-                $(obj).parent().siblings(".consignee-item").find("span .per_province").text(vip2_select1_text);
-                $(obj).parent().siblings(".addr-detail").find(".addr-info").find(".per_province").text(vip2_select1_text);
-                $(obj).parent().siblings(".addr-detail").find(".addr-info").find(".per_address").text(vip2_site);
-                $(obj).parent().siblings(".addr-detail").find(".addr-info").find(".per_city").text(vip2_select2_text);
-                $(obj).parent().siblings(".addr-detail").find(".addr-info").find(".per_district").text(vip2_select3_text);
-                $(obj).parent().siblings(".addr-detail").find(".addr-info").find(".per_address").text(vip2_site);
-                $(obj).parent().siblings(".addr-detail").find(".addr-tel").text(vip2_tel);
-                $(obj).parent().siblings(".addr-detail").find(".per_email").val(vip2_email);
-                $('.mask').fadeOut(100);
-                $('.collect').slideUp(200);
-                console.log(data);
-            } else {
-                console.log(data);
-            }
-        });
-    });
-}
-/*新增收货地址*/
-function use_NewConsignee(){
-    $(".collect input[type='text']").attr("value","");
-    $(".vip_select1").find("option:selected").removeAttr("selected");
-    $(".vip_select2").html("");
-    $(".vip_select2").append('<option value>请选择</option>');
-    $(".vip_select3").html("");
-    $(".vip_select3").append('<option value>请选择</option>');
-    $(".poptit span").text("新增收货人地址");
-    $(".edit_message").hide();
-    $(".save").show();
-    $('.mask').fadeIn(100);      //弹出窗口
-    $('.popover_3').slideDown(200);
-    $('.close').click(function(){
-        $('.mask').fadeOut(100);
-        $('.collect').slideUp(200);
-    });
 }
