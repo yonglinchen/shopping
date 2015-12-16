@@ -17,7 +17,7 @@
                                     <div class="item-form">\n\
                                         <div class="cell p-checkbox">\n\
                                             <div class="cart-checkbox">\n\
-                                                <input p-type="1211545593_1" type="checkbox" remove_ids="'+data.data[i].goods_id+'" name="checkItem" value="1211545593_1" data-bind="cbid" class="jdcheckbox" clstag="clickcart|keycount|xincart|cart_checkOn_sku">\n\
+                                                <input p-type="1211545593_1" type="checkbox" checked="checked" remove_ids="'+data.data[i].goods_id+'" name="checkItem" value="1211545593_1" data-bind="cbid" class="jdcheckbox" clstag="clickcart|keycount|xincart|cart_checkOn_sku">\n\
                                                 <label  class="checked">勾选商品</label>\n\
                                                 <span class="line-circle"></span>\n\
                                             </div>\n\
@@ -65,7 +65,7 @@
             }
             $(".amount-sum_em").text(num_);
             $(".sumPrice_em").text(price_.toFixed(2));
-            //增加
+            //增加商品数
             $(".increment").live("click", function() {
                 var goods_number = parseFloat($(this).parent().parent().siblings(".p-price_00").find(".goods_number").text());
                 var ids = $(this).attr("ids");
@@ -86,11 +86,10 @@
                         $(".strongNum"+ids).text((itxtVal_1*goods_number).toFixed(2));
                         $(".amount-sum_em").text(num_1);
                         $(".sumPrice_em").text(price_1.toFixed(2));
-                    } else {//console.log(data);
-                        }
+                    } else { }
                 }); 
             })
-            //减少
+            //减少商品数
             $(".decrement").live("click", function() {
                 var goods_number = parseFloat($(this).parent().parent().siblings(".p-price_00").find(".goods_number").text());
                 var ids = $(this).attr("ids");
@@ -114,8 +113,7 @@
                         $(".strongNum"+ids).text(((itxtVal-1)*goods_number).toFixed(2));
                         $(".amount-sum_em").text(num_1);
                         $(".sumPrice_em").text(price_1.toFixed(2));
-                    } else {//console.log(data);
-                        }
+                    } else { }
                 }); 
             });
             //删除商品
@@ -137,8 +135,7 @@
                 apiSendAjax(send_url, service, true, function (status, data) {
                     if(status == 0){
                         //console.log(data);
-                    } else {//console.log(data);
-                        }
+                    } else { }
                 }); 
             });
             //删除选中的商品
@@ -155,16 +152,33 @@
                     apiSendAjax(send_url, service, true, function (status, data) {
                         if(status == 0){
                             window.location.reload();
-                        } else {//console.log(data);
-                            }
+                        } else { }
                     }); 
                 })
             });
-        }  else {//console.log(data);
-            }
+        }  else { }
     }); 
-    //去结算
+    //全选按钮的操作
+    $("#toggle-checkboxes_up,#toggle-checkboxes_down").on("click",function(){
+        this.checked?$("input[type='checkbox']").each(function(){this.checked=true;}):$("input[type='checkbox']").each(function(){this.checked=false;});
+    });
+    //勾选按钮的操作
+    $("input[name='checkItem']").live("click",function(){
+        var text_0 = parseInt($(".amount-sum_em").text());
+        var text_1 = parseFloat($(".sumPrice_em").text());
+        var text_2 = parseFloat($(this).parent().parent().siblings(".p-sum").find("strong").text());
+        var text_3 = parseInt($(this).parent().parent().siblings(".p-quantity").find(".itxt").val());
+        if($(this).attr("checked")== null){
+            $(".amount-sum_em").text(text_0 - text_3);
+            $(".sumPrice_em").text((text_1 - text_2).toFixed(2));
+        }else{
+            $(".amount-sum_em").text(text_0 + text_3);
+            $(".sumPrice_em").text(parseFloat(text_1 + text_2).toFixed(2));
+        }
+        $("#toggle-checkboxes_up,#toggle-checkboxes_down").removeAttr("checked");
+        //window.location.reload();
+    }); 
+    //结算链接   
     $(".submit-btn").on("click",function(){
         window.location.href= "getOrderInfo.html";
     });
- 
