@@ -329,7 +329,6 @@ function use_EditConsignee(obj){
     $(".vip_tel").val(per_tel);
     $(".vip_email").val(per_email);
     $(".edit_message").unbind().click(function(){
-        alert(address_id);
         if(!common_reg()){
             return false;
         }

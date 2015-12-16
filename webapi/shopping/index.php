@@ -5,7 +5,7 @@ function dealCartFlow($body){
     $module_db = "shopping";
     $module_port = 3306;
 
-    $mysqliObj = new \DbMysqli(_HOST_,_USER_,_PSW_,"shopping",$module_port);//mysqli对象
+    $mysqliObj = new \DbMysqli(_HOST_,'qstdb',"qstdb","shopping",$module_port);//mysqli对象
     $result_data = array(
     "status"=>0,
     "desc"=>"",
