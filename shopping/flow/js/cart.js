@@ -67,9 +67,11 @@
             $(".sumPrice_em").text(price_.toFixed(2));
             //增加商品数
             $(".increment").live("click", function() {
-                var goods_number = parseFloat($(this).parent().parent().siblings(".p-price_00").find(".goods_number").text());
+                $(this).parent().parent().siblings(".p-checkbox").find("input[name='checkItem']").attr({checked:"checked"});
+                    
+                var goods_number = parseFloat($(this).parent().parent().siblings(".p-price_00").find(".goods_number").text());//单价
                 var ids = $(this).attr("ids");
-                var itxtVal = parseInt($(this).siblings(".itxt").val());
+                var itxtVal = parseInt($(this).siblings(".itxt").val());//数量
                 var itxtVal_1 = itxtVal+1;
                 var num_1 = parseInt($(".amount-sum_em").text())+1;
                 var price_1 = parseFloat($(".sumPrice_em").text())+goods_number;
@@ -91,11 +93,12 @@
             })
             //减少商品数
             $(".decrement").live("click", function() {
-                var goods_number = parseFloat($(this).parent().parent().siblings(".p-price_00").find(".goods_number").text());
+                $(this).parent().parent().siblings(".p-checkbox").find("input[name='checkItem']").attr({checked:"checked"});
+                var goods_number = parseFloat($(this).parent().parent().siblings(".p-price_00").find(".goods_number").text());//单价
                 var ids = $(this).attr("ids");
-                var itxtVal = parseInt($(this).siblings(".itxt").val());
+                var itxtVal = parseInt($(this).siblings(".itxt").val());//数量
                 if(itxtVal==1){
-                    $("#changeNum"+ids).attr("disabled","disabled");
+                    $("#changeNum"+ids).attr("disabled","disabled");//数量不小于1
                     return false; 
                 };
                 $("#changeNum"+ids).val(itxtVal-1);
@@ -113,6 +116,9 @@
                         $(".strongNum"+ids).text(((itxtVal-1)*goods_number).toFixed(2));
                         $(".amount-sum_em").text(num_1);
                         $(".sumPrice_em").text(price_1.toFixed(2));
+                        //alert(123);
+                        //$('.cart-warp').load();
+                        //alert(123);
                     } else { }
                 }); 
             });
