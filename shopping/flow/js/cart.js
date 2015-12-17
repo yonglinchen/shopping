@@ -67,14 +67,19 @@
             $(".sumPrice_em").text(price_.toFixed(2));
             //增加商品数
             $(".increment").live("click", function() {
-                $(this).parent().parent().siblings(".p-checkbox").find("input[name='checkItem']").attr({checked:"checked"});
-                    
+                var checked = $(this).parent().parent().siblings(".p-checkbox").find("input[name='checkItem']").attr("checked");
                 var goods_number = parseFloat($(this).parent().parent().siblings(".p-price_00").find(".goods_number").text());//单价
-                var ids = $(this).attr("ids");
                 var itxtVal = parseInt($(this).siblings(".itxt").val());//数量
                 var itxtVal_1 = itxtVal+1;
-                var num_1 = parseInt($(".amount-sum_em").text())+1;
-                var price_1 = parseFloat($(".sumPrice_em").text())+goods_number;
+                if(checked == 'checked'){
+                    var num_1 = parseInt($(".amount-sum_em").text())+1;
+                    var price_1 = parseFloat($(".sumPrice_em").text())+goods_number;
+                }else{
+                    $(this).parent().parent().siblings(".p-checkbox").find("input[name='checkItem']").attr({checked:"checked"});
+                    var num_1 = parseInt($(".amount-sum_em").text())+itxtVal_1;
+                    var price_1 = parseFloat($(".sumPrice_em").text())+parseFloat(itxtVal_1*goods_number);
+                }
+                var ids = $(this).attr("ids");               
                 var service = {};  
                 service.inter_num = "0050";   
                 service.servicecode = "1004";
@@ -93,17 +98,24 @@
             })
             //减少商品数
             $(".decrement").live("click", function() {
-                $(this).parent().parent().siblings(".p-checkbox").find("input[name='checkItem']").attr({checked:"checked"});
-                var goods_number = parseFloat($(this).parent().parent().siblings(".p-price_00").find(".goods_number").text());//单价
                 var ids = $(this).attr("ids");
                 var itxtVal = parseInt($(this).siblings(".itxt").val());//数量
                 if(itxtVal==1){
                     $("#changeNum"+ids).attr("disabled","disabled");//数量不小于1
                     return false; 
                 };
-                $("#changeNum"+ids).val(itxtVal-1);
-                var num_1 = parseInt($(".amount-sum_em").text())-1;
-                var price_1 = parseFloat($(".sumPrice_em").text())-goods_number;
+                var checked = $(this).parent().parent().siblings(".p-checkbox").find("input[name='checkItem']").attr("checked");
+                var goods_number = parseFloat($(this).parent().parent().siblings(".p-price_00").find(".goods_number").text());//单价
+                var itxtVal_1 = itxtVal-1;
+                if(checked == 'checked'){
+                    var num_1 = parseInt($(".amount-sum_em").text())-1;//总数量
+                    var price_1 = parseFloat($(".sumPrice_em").text())-goods_number;  //总价格
+                }else{
+                    $(this).parent().parent().siblings(".p-checkbox").find("input[name='checkItem']").attr({checked:"checked"});
+                    var num_1 = parseInt($(".amount-sum_em").text())+itxtVal_1;
+                    var price_1 = parseFloat($(".sumPrice_em").text())+parseFloat(itxtVal_1*goods_number);
+                }                
+                $("#changeNum"+ids).val(itxtVal-1);                
                 var service = {};  
                 service.inter_num = "0050";   
                 service.servicecode = "1004";
@@ -116,9 +128,6 @@
                         $(".strongNum"+ids).text(((itxtVal-1)*goods_number).toFixed(2));
                         $(".amount-sum_em").text(num_1);
                         $(".sumPrice_em").text(price_1.toFixed(2));
-                        //alert(123);
-                        //$('.cart-warp').load();
-                        //alert(123);
                     } else { }
                 }); 
             });
@@ -170,6 +179,11 @@
     });
     //勾选按钮的操作
     $("input[name='checkItem']").live("click",function(){
+        if($(this).attr("checked") == null){
+            $(this).attr("checked");
+        }else{
+            $(this).removeAttr("checked");
+        }        
         var text_0 = parseInt($(".amount-sum_em").text());
         var text_1 = parseFloat($(".sumPrice_em").text());
         var text_2 = parseFloat($(this).parent().parent().siblings(".p-sum").find("strong").text());
