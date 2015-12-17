@@ -179,16 +179,12 @@
     });
     //勾选按钮的操作
     $("input[name='checkItem']").live("click",function(){
-        if($(this).attr("checked") == null){
-            $(this).attr("checked");
-        }else{
-            $(this).removeAttr("checked");
-        }        
         var text_0 = parseInt($(".amount-sum_em").text());
         var text_1 = parseFloat($(".sumPrice_em").text());
         var text_2 = parseFloat($(this).parent().parent().siblings(".p-sum").find("strong").text());
         var text_3 = parseInt($(this).parent().parent().siblings(".p-quantity").find(".itxt").val());
         if($(this).attr("checked")== null){
+            $(this).attr("checked");
             $(".amount-sum_em").text(text_0 - text_3);
             $(".sumPrice_em").text((text_1 - text_2).toFixed(2));
         }else{
@@ -196,7 +192,6 @@
             $(".sumPrice_em").text(parseFloat(text_1 + text_2).toFixed(2));
         }
         $("#toggle-checkboxes_up,#toggle-checkboxes_down").removeAttr("checked");
-        //window.location.reload();
     }); 
     //结算链接   
     $(".submit-btn").on("click",function(){
