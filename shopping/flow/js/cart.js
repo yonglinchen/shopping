@@ -95,6 +95,8 @@
                         $(".sumPrice_em").text(price_1.toFixed(2));
                     } else { }
                 }); 
+                
+                checkall();
             })
             //减少商品数
             $(".decrement").live("click", function() {
@@ -130,6 +132,8 @@
                         $(".sumPrice_em").text(price_1.toFixed(2));
                     } else { }
                 }); 
+                
+                checkall();
             });
             //删除商品
             $(".remove").live("click",function(){
@@ -175,7 +179,26 @@
     }); 
     //全选按钮的操作
     $("#toggle-checkboxes_up,#toggle-checkboxes_down").on("click",function(){
-        this.checked?$("input[type='checkbox']").each(function(){this.checked=true;}):$("input[type='checkbox']").each(function(){this.checked=false;});
+        var _this = this;
+        if(_this.checked){
+            $(".jdcheckbox").attr("checked", true);
+            var sumPrice_em = 0;
+            var amount_sum = 0;
+           $("#cart-list input[type='checkbox']").each(function(){
+                this.checked=true;
+                sumPrice_em += parseFloat($(this).parent(".cart-checkbox").parent(".p-checkbox").parent(".item-form").children(".p-sum").children("strong").text());
+                amount_sum += parseInt($(this).parent(".cart-checkbox").parent(".p-checkbox").parent(".item-form").children(".p-quantity").find(".itxt").val());
+           }); 
+           $(".sumPrice_em").html(sumPrice_em.toFixed(2));
+            $(".amount-sum_em").html(amount_sum);
+        }else {
+            $(".jdcheckbox").attr("checked", false);
+            $("#cart-list input[type='checkbox']").each(function(){
+                this.checked=false;
+            });
+            $(".amount-sum_em").html("0");
+            $(".sumPrice_em").html("0.00");
+        }                
     });
     //勾选按钮的操作
     $("input[name='checkItem']").live("click",function(){
@@ -191,9 +214,22 @@
             $(".amount-sum_em").text(text_0 + text_3);
             $(".sumPrice_em").text(parseFloat(text_1 + text_2).toFixed(2));
         }
-        $("#toggle-checkboxes_up,#toggle-checkboxes_down").removeAttr("checked");
+        checkall();
     }); 
     //结算链接   
     $(".submit-btn").on("click",function(){
         window.location.href= "getOrderInfo.html";
     });
+    
+    
+    
+    function checkall(){
+        var ischecked = true;
+        $("input[name='checkItem']").each(function(){
+            if($(this).attr("checked")== null){
+                ischecked = false;
+                return false;
+            }
+        });
+        $("#toggle-checkboxes_up,#toggle-checkboxes_down").attr("checked", ischecked);
+    }
